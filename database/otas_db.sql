@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 13, 2021 at 07:51 AM
--- Server version: 10.4.19-MariaDB
--- PHP Version: 8.0.7
+-- Generation Time: Mar 19, 2023 at 09:25 AM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 7.4.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -101,7 +101,6 @@ CREATE TABLE `department_list` (
 --
 
 INSERT INTO `department_list` (`id`, `name`, `description`, `status`, `date_created`, `date_updated`) VALUES
-(1, 'College of Industrial Technology', 'Develop world-class industrial workers and middle-level managers equipped with scientific knowledge, technological skills, and ethical work values to achieve a desirable quality of life.', 1, '2021-12-07 09:28:16', '2021-12-07 09:36:07'),
 (2, 'College of Education', 'Implement Teacher Education Programs for the elementary and secondary levels and endeavor to achieve quality and excellence, relevance and responsiveness, equity and access, and efficiency and effectiveness in instruction, research, extension, and production.', 1, '2021-12-07 09:28:33', '2021-12-07 09:46:57'),
 (3, 'College of Arts and Sciences', 'Develop and implement programs in Liberal Arts and Sciences to achieve academic excellence and competencies geared towards the total development of the learners in their specialized fields.', 1, '2021-12-07 09:34:11', NULL),
 (4, 'College of Business Management and Accountancy', 'College of Business Management and Accountancy', 1, '2021-12-07 09:34:55', NULL),
@@ -136,7 +135,8 @@ CREATE TABLE `student_list` (
 
 INSERT INTO `student_list` (`id`, `firstname`, `middlename`, `lastname`, `department_id`, `curriculum_id`, `email`, `password`, `gender`, `status`, `avatar`, `date_created`, `date_updated`) VALUES
 (1, 'John', 'D', 'Smith', 5, 1, 'jsmith@sample.com', '1254737c076cf867dc53d60a0364f38e', 'Male', 1, 'uploads/student-1.png?v=1639202693', '2021-12-11 12:50:03', '2021-12-11 14:04:53'),
-(3, 'Claire', 'C', 'Blake', 5, 1, 'cblake@sample.com', '4744ddea876b11dcb1d169fadf494418', 'Female', 1, 'uploads/student-3.png?v=1639377518', '2021-12-13 10:42:51', '2021-12-13 14:38:38');
+(3, 'Claire', 'C', 'Blake', 5, 1, 'cblake@sample.com', '4744ddea876b11dcb1d169fadf494418', 'Female', 1, 'uploads/student-3.png?v=1639377518', '2021-12-13 10:42:51', '2021-12-13 14:38:38'),
+(4, 'Henry Hart', 'Paluca', 'Alegrado', 5, 2, 'yawamo@gmail.com', '6b2244ecf5881e4aa6d4235d16be7b48', 'Male', 1, 'uploads/student-4.png?v=1679211206', '2023-03-19 15:31:48', '2023-03-19 15:33:26');
 
 -- --------------------------------------------------------
 
@@ -157,9 +157,9 @@ CREATE TABLE `system_info` (
 INSERT INTO `system_info` (`id`, `meta_field`, `meta_value`) VALUES
 (1, 'name', 'Online Thesis Archiving System - PHP'),
 (6, 'short_name', 'OTAS - PHP'),
-(11, 'logo', 'uploads/logo-1638840281.png'),
+(11, 'logo', 'uploads/logo-1679213419.png'),
 (13, 'user_avatar', 'uploads/user_avatar.jpg'),
-(14, 'cover', 'uploads/cover-1638840281.png'),
+(14, 'cover', 'uploads/cover-1679213449.png'),
 (15, 'content', 'Array'),
 (16, 'email', 'info@university101.com'),
 (17, 'contact', '09854698789 / 78945632'),
@@ -268,7 +268,7 @@ ALTER TABLE `department_list`
 -- AUTO_INCREMENT for table `student_list`
 --
 ALTER TABLE `student_list`
-  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `system_info`
