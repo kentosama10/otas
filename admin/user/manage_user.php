@@ -11,7 +11,7 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
 <script>
 	alert_toast("<?php echo $_settings->flashdata('success') ?>",'success')
 </script>
-<?php endif;?>
+<?php endif;?>g
 <div class="card card-outline card-primary">
 	<div class="card-body">
 		<div class="container-fluid">
