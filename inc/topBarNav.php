@@ -39,8 +39,7 @@
               <span class="mx-1"><a href="<?= base_url.'classes/Login.php?f=student_logout' ?>"><i class="fa fa-power-off"></i></a></span>
             <?php else: ?>
               <a href="./register.php" class="mx-2 text-light me-2">Register</a>
-              <a href="./login.php" class="mx-2 text-light me-2">Student Login</a>
-              <a href="./admin" class="mx-2 text-light">Admin login</a>
+              <a href="./login.php" class="mx-2 text-light me-2">Login</a>
             <?php endif; ?>
           </div>
         </div>
