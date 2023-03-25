@@ -38,6 +38,15 @@
         background-color: transparent;
       }
 
+      p {
+        position: absolute;
+        bottom: 30px;
+      }
+
+      i {
+        padding: 25px;
+      }
+
       a {
         color: black;
         text-decoration: none;
@@ -51,7 +60,9 @@
       }
 
       section {
+        position: relative;
         width: 380px;
+        height: 500px;
         padding: 5px;
         background-color: #ffffff;
         border-radius: 25px;
@@ -59,24 +70,51 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        transition: transform 0.3s ease;
       }
 
-      section > img {
+      section:hover {
+        transform: translateY(-10px);
+        transition: transform 0.3s ease 0s;
+      }
+
+      section:not(:hover) {
+        transition: transform 0.3s ease 0.3s;
+        transform: translateY(0);
+      }
+
+      section img {
         margin: 25px 0;
         width: 200px;
         height: auto;
         background-color: transparent;
       }
 
-      footer > a {
+      footer a {
         display: flex;
         gap: 10px;
         align-items: center;
       }
 
-      footer > a > img {
+      footer a img {
         width: 20px;
         height: 20px;
+      }
+
+      footer a:hover img {
+        animation: move 1s infinite;
+      }
+
+      @keyframes move {
+        0% {
+          transform: translateX(0);
+        }
+        50% {
+          transform: translateX(-10px);
+        }
+        100% {
+          transform: translateX(0);
+        }
       }
     </style>
   </head>
@@ -86,19 +124,30 @@
       <section>
         <img src="/uploads/devs/Henry.png" alt="Alegrado" />
         <h2>Alegrado, Henry Hart</h2>
-        <i>"Motto here"</i>
+        <i
+          >"Because I am handsome and loved by all. The phrase 'flowers bloom on
+          sight' was created it describe me."</i
+        >
         <p>henryhartalegrado@gmail.com</p>
       </section>
       <section>
         <img src="/uploads/devs/Kim.png" alt="Manlangit" />
         <h2>Manlangit, Kim Gedonn</h2>
-        <i>"Motto here"</i>
+        <i
+          >"Gentlemen, we're all educated people here that use their words
+          instead of fists. Let's take our time talking, I rely on my handsome
+          face to eat so please, don't hit the face or I'll go hungry."</i
+        >
         <p>ghedonnheaven@gmail.com</p>
       </section>
       <section>
         <img src="/uploads/devs/Kent.png" alt="Sumbilon" />
         <h2>Sumbilon, Kent</h2>
-        <i>"Motto here"</i>
+        <i
+          >"Code by day, debug by night, Write your way to digital delight, From
+          lines of code to software might, Let programming be your guiding
+          light."</i
+        >
         <p>knstsmbln1@gmail.com</p>
       </section>
     </main>
