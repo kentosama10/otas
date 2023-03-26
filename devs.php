@@ -1,3 +1,4 @@
+<?php require_once('./config.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -122,7 +123,7 @@
     <h1>The Developers</h1>
     <main>
       <section>
-        <img src="/uploads/devs/Henry.png" alt="Alegrado" />
+        <img src="./uploads/devs/Henry.png" alt="Alegrado" />
         <h2>Alegrado, Henry Hart</h2>
         <i
           >"Because I am handsome and loved by all. The phrase 'flowers bloom on
@@ -131,7 +132,7 @@
         <p>henryhartalegrado@gmail.com</p>
       </section>
       <section>
-        <img src="/uploads/devs/Kim.png" alt="Manlangit" />
+        <img src="./uploads/devs/Kim.png" alt="Manlangit" />
         <h2>Manlangit, Kim Gedonn</h2>
         <i
           >"Gentlemen, we're all educated people here that use their words
@@ -141,7 +142,7 @@
         <p>ghedonnheaven@gmail.com</p>
       </section>
       <section>
-        <img src="/uploads/devs/Kent.png" alt="Sumbilon" />
+        <img src="./uploads/devs/Kent.png" alt="Sumbilon" />
         <h2>Sumbilon, Kent</h2>
         <i
           >"Code by day, debug by night, Write your way to digital delight, From
@@ -152,8 +153,8 @@
       </section>
     </main>
     <footer>
-      <a href="#">
-        <img src="/uploads/devs/doublearrow.png" alt="double arrow" />
+      <a href=<?php echo base_url ?>>
+        <img src="./uploads/devs/doublearrow.png" alt="double arrow" />
         <h3>Back to the website</h3></a
       >
     </footer>
