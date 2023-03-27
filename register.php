@@ -269,25 +269,30 @@
     <script src="<?php echo base_url ?>plugins/select2/js/select2.full.min.js"></script>
 
     <script>
-      var cur_arr = $.parseJSON("<?= json_encode($cur_arr) ?>");
-      $(document).ready(function () {
-        end_loader();
-        $(".select2").select2({
-          width: "100%",
-        });
-        $("#department_id").change(function () {
-          var did = $(this).val();
-          $("#curriculum_id").html("");
-          if (!!cur_arr[did]) {
-            Object.keys(cur_arr[did]).map((k) => {
-              var opt = $("<option>");
-              opt.attr("value", cur_arr[did][k].id);
-              opt.text(cur_arr[did][k].name);
-              $("#curriculum_id").append(opt);
-            });
-          }
-          $("#curriculum_id").trigger("change");
-        });
+     var cur_arr = $.parseJSON('<?= str_replace('"', '\"', json_encode($cur_arr)) ?>');
+$(document).ready(function () {
+  end_loader();
+  $(".select2").select2({
+    width: "100%",
+  });
+  console.log('cur_arr:', cur_arr); // log the cur_arr object to the console for debugging
+  $("#department_id").change(function () {
+    var did = $(this).val();
+    console.log('did:', did); // log the selected department ID to the console for debugging
+    $("#curriculum_id").html("");
+    if (!!cur_arr[did]) {
+      Object.keys(cur_arr[did]).map((k) => {
+        var opt = $("<option>");
+        opt.attr("value", cur_arr[did][k].id);
+        opt.text(cur_arr[did][k].name);
+        $("#curriculum_id").append(opt);
+      });
+    } else {
+      console.log('No curriculum data found for department', did); // log an error message to the console if no curriculum data is found
+    }
+    $("#curriculum_id").trigger("change");
+  });
+
 
         // Registration Form Submit
         $("#registration-form").submit(function (e) {

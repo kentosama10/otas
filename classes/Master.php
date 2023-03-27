@@ -17,7 +17,6 @@ Class Master extends DBConnection {
 			$resp['status'] = 'failed';
 			$resp['error'] = $this->conn->error;
 			return json_encode($resp);
-			exit;
 		}
 	}
 	function save_department(){
@@ -296,12 +295,6 @@ switch ($action) {
 	break;
 	case 'update_status':
 		echo $Master->update_status();
-	break;
-	case 'save_payment':
-		echo $Master->save_payment();
-	break;
-	case 'delete_payment':
-		echo $Master->delete_payment();
 	break;
 	default:
 		// echo $sysset->index();

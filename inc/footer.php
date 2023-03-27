@@ -1,3 +1,5 @@
+
+
 <script>
   $(document).ready(function(){
     $('.list-group').each(function(){
@@ -68,7 +70,7 @@
         </strong>
         All rights reserved.
         <div class="float-right d-none d-sm-inline-block">
-          <b><?php echo $_settings->info('short_name') ?> by: Group 7</b>
+          <b><?php echo $_settings->info('short_name') ?> by: <a href="./devs.php">Group 7</a></b>
         </div>
       </div>
       </footer>
