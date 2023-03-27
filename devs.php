@@ -123,7 +123,6 @@
     }
   </style>
   <title>
-    <?php echo $_settings->info('name') ?>
   </title>
   <link rel="icon" href="<?php echo validate_image($_settings->info('logo')) ?>" />
 </head>
