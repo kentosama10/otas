@@ -1,4 +1,0 @@
-to embed image from gdrive
-
-CODE: https://drive.google.com/uc?export=view&id=[ID of img]
-to get the ID, open the link of an image from gdrive then copy the ID between /d/ and /view/

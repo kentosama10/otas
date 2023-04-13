@@ -104,9 +104,9 @@ session_start();
     <link rel="stylesheet" href="../styles/dashboard-styles/account-table.css">
 
 
-    <link rel="icon" type="image/x-icon" href="../img/urslogo.png">
+    <link rel="icon" type="image/x-icon" href="../img/svci_logo.png">
 
-    <title>URS Archive | Accounts</title>
+    <title>SVCI Research and Development Archiving System | Accounts</title>
 
 </head>
 
@@ -158,7 +158,7 @@ session_start();
 
    <div class="left-nav ">
         <div class="logo-title-container ">
-            <img src="../img/urslogo.png" alt=" " class="urslogo ">
+            <img src="../img/svci_logo.png" alt=" " class="svcilogo ">
             <p class="title ">ADMINISTRATOR</p>
         </div>
 
@@ -174,7 +174,7 @@ session_start();
         <a href="admin-thesis.php" class="general-link ">
             <div class="list-container ">
                 <i class="fa-solid fa-list-check fa-lg "></i>
-                <p class="list-button ">Uploaded Theses
+                <p class="list-button ">Uploaded Thesis
                     <i class="fa-solid fa-angle-right arrow-icon "></i>
                 </p>
             </div>
