@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="img/urslogo.png">
+
+    <link rel="stylesheet" href="styles/signin-form.css">
+    <title>URS Archive | Sign in</title>
+
+</head>
+
+<body>
+
+    <div class="section-grid">
+        <div class="left-section">
+            <div>
+                <a href="index.html">
+                    <img src="img/urslogo.png" alt="" class="logo">
+                </a>
+            </div>
+            <div class="welcome-sidebar">
+                <div class="welcome-label">URS Archive</div>
+                <div class="welcome-statement">Access most of the theses accomplished by University of Rizal System - Antipolo Campus students and alumnis.</div>
+            </div>
+        </div>
+        <div class="right-section">
+            <div class="header">
+                <div class="welcome-label-header-container">
+                    <a href="index.html" class="link-index">
+                        <div class="welcome-label-header">URS Archive</div>
+                    </a>
+                    <div class="welcome-statement-header">Access most of the theses accomplished by University of Rizal System - Antipolo Campus students and alumnis.</div>
+                </div>
+            </div>
+            <form action="">
+                <div class="signin-form-container">
+                    <div class="signin-label-container">
+                        <p class="signin-label">SIGN IN</p>
+                    </div>
+                    <div class="signin-form">
+                        <div class="signin-input-container">
+                            <input type="text" class="signin-input-username" placeholder="Username" required>
+                        </div>
+
+                        <div class="signin-input-container">
+                            <input type="password" class="signin-input-password" placeholder="Password" id="signin-input-password" required>
+                        </div>
+
+
+                        <input type="checkbox" id="show-password-button" class="show-password-button" onclick="myFunction()">
+                        <label for="show-password-button" class="show-password-label">Show password</label>
+
+                        <div class="signin-input-container">
+                            <div class="signin-button-container">
+                                <button class="signin-button" type="submit">SIGN IN</button>
+                            </div>
+                        </div>
+                        <div class="signin-input-container">
+                            <a href="user-forgot-pass.html" class="forgot-pass-button">
+                                <div class="forgot-pass-label">
+                                    Forgot password?</div>
+                            </a>
+                        </div>
+                        <div class="signin-input-container">
+                            <a href="user-signup.html" class="signup-button">
+                                <div class="signup-label">
+                                    Don't have an account? Sign up here
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("signin-input-password");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
+    </script>
+</body>
+
+</html>

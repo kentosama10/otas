@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://kit.fontawesome.com/067d14b27b.js" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <title>Search</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: rgb(240, 242, 245);
+            padding: 50px 250px;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .main-container {
+            background-color: white;
+            flex: 1;
+            max-width: 800px;
+            min-width: 200px;
+            padding: 15px 20px;
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+            border-radius: 6px;
+            margin-bottom: 15px;
+        }
+        
+        .tag-title-container {
+            display: flex;
+            margin-bottom: 20px;
+            padding: 8px 0;
+        }
+        
+        .tag-container {
+            flex: 1;
+            background-color: rgb(238, 109, 3);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            margin-right: 20px;
+        }
+        
+        .thesis-tag {
+            font-size: 12px;
+            font-weight: 700;
+        }
+        
+        .title-container {
+            flex: 6;
+        }
+        
+        .thesis-title {
+            font-weight: 700;
+        }
+        
+        .abstract-content-container {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .abstract-label-container,
+        .abstract-content-container {
+            flex: 1;
+            margin-bottom: 10px;
+        }
+        
+        .abstract-label {
+            font-weight: 700;
+            padding-bottom: 5px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+        }
+        
+        .abstract-content {
+            font-weight: 500;
+            line-height: 22px;
+            margin-bottom: 10px;
+        }
+        
+        .credits-container {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .author-container,
+        .course-container,
+        .year-container,
+        .date-container {
+            flex: 1;
+            margin-bottom: 10px;
+        }
+        
+        .thesis-author,
+        .thesis-course,
+        .thesis-year,
+        .thesis-date {
+            font-weight: 500;
+        }
+        
+        .download {
+            margin-top: 5px;
+            background-color: #009432;
+            color: white;
+            font-weight: 600;
+            padding: 14px 16px;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: .15s;
+        }
+        
+        .download-container i {
+            margin-right: 10px;
+        }
+        
+        .download:hover {
+            background-color: #005e1f;
+            color: rgb(255, 255, 255);
+            box-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="tag-title-container">
+            <div class="tag-container">
+                <div class="thesis-tag">COENG</div>
+            </div>
+            <div class="title-container">
+                <div class="thesis-title">Development and Acceptability of Theses Archiving Management System</div>
+            </div>
+        </div>
+
+        <div class="abstract-content-container">
+            <div class="abstract-label-container">
+                <div class="abstract-label">
+                    Abstract
+                </div>
+            </div>
+            <div class="abstract-content-container">
+                <div class="abstract-content">
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est. Vivamus
+                    a tellus.
+                </div>
+            </div>
+        </div>
+
+        <div class="credits-container">
+            <div class="author-container">
+                <div class="thesis-author">
+                    <strong>Author:</strong> Juan Dela Cruz
+                </div>
+            </div>
+            <div class="course-container">
+                <div class="thesis-course">
+                    <strong>Course:</strong> BS Computer Engineering
+                </div>
+            </div>
+            <div class="year-container">
+                <div class="thesis-year">
+                    <strong>Year of Publication:</strong> 2022
+                </div>
+            </div>
+            <div class="author-container">
+                <div class="thesis-date">
+                    <strong>Date Uploaded:</strong> July 22, 2022
+                </div>
+            </div>
+        </div>
+
+        <div class="download-container">
+            <button class="download">
+                <i class="fa-solid fa-file-arrow-down fa-lg"></i>
+                Download File</button>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="tag-title-container">
+            <div class="tag-container" style="background-color: rgb(65, 147, 255);">
+                <div class="thesis-tag">COBA</div>
+            </div>
+            <div class="title-container">
+                <div class="thesis-title">Development and Acceptability of ...</div>
+            </div>
+        </div>
+
+        <div class="abstract-content-container">
+            <div class="abstract-label-container">
+                <div class="abstract-label">
+                    Abstract
+                </div>
+            </div>
+            <div class="abstract-content-container">
+                <div class="abstract-content">
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est. Vivamus
+                    a tellus.
+                </div>
+            </div>
+        </div>
+
+        <div class="credits-container">
+            <div class="author-container">
+                <div class="thesis-author">
+                    <strong>Author:</strong> Juan Dela Cruz
+                </div>
+            </div>
+            <div class="course-container">
+                <div class="thesis-course">
+                    <strong>Course:</strong> BS Computer Engineering
+                </div>
+            </div>
+            <div class="year-container">
+                <div class="thesis-year">
+                    <strong>Year of Publication:</strong> 2022
+                </div>
+            </div>
+            <div class="author-container">
+                <div class="thesis-date">
+                    <strong>Date Uploaded:</strong> July 22, 2022
+                </div>
+            </div>
+        </div>
+
+        <div class="download-container">
+            <button class="download">
+                <i class="fa-solid fa-file-arrow-down fa-lg"></i>
+                Download File</button>
+        </div>
+    </div>
+</body>
+
+</html>

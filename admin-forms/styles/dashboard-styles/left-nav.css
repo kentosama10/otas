@@ -1,0 +1,119 @@
+.left-nav::-webkit-scrollbar {
+    display: none;
+    /* Chrome & Safari */
+}
+
+.left-nav {
+    width: 250px;
+    position: fixed;
+    overflow: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #1e6dce;
+    padding: 10px 20px 50px 20px;
+    transition: width .15s;
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */
+    scrollbar-width: none;
+    /* Firefox */
+    z-index: 1002;
+}
+
+.logo-title-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 9px 15px 9px 15px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    transition: background-color .15s;
+    cursor: default;
+}
+
+.urslogo {
+    height: 50px;
+    width: auto;
+}
+
+.title {
+    flex: 1;
+    text-align: center;
+    color: white;
+    font-weight: 700;
+}
+
+.general-link {
+    display: block;
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+
+.dashboard-container,
+.list-container,
+.account-container,
+.log-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    position: relative;
+    cursor: pointer;
+    transition: .30s;
+}
+
+.dashboard-container:hover,
+.list-container:hover,
+.account-container:hover,
+.log-container:hover {
+    background-color: rgba(255, 255, 255, 0.13);
+    color: black;
+}
+
+.dashboard-button,
+.list-button,
+.account-button,
+.log-button {
+    margin-left: 20px;
+    font-weight: 600;
+}
+
+.arrow-icon {
+    position: absolute;
+    right: 15px;
+    z-index: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .left-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 50px;
+    }
+    .logo-title-container {
+        justify-content: center;
+    }
+    .title,
+    .dashboard-button,
+    .list-button,
+    .account-button,
+    .log-button,
+    .arrow-icon {
+        display: none;
+        height: 51px;
+    }
+    .dashboard-container,
+    .list-container,
+    .account-container,
+    .log-container {
+        justify-content: center;
+        padding: 30px 0 30px 0;
+    }
+}

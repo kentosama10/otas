@@ -1,0 +1,248 @@
+body {
+    font-family: Raleway, Arial;
+    background-color: rgb(240, 242, 245);
+    margin: 0;
+    padding: 100px 20px 50px 310px;
+    user-select: none;
+}
+
+.header-nav {
+    display: flex;
+    height: 80px;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+    gap: 10px;
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */
+    scrollbar-width: none;
+    /* Firefox */
+    z-index: 1002;
+}
+
+.header-nav::-webkit-scrollbar {
+    display: none;
+    /* Chrome & Safari */
+}
+
+.left-section {
+    flex: 2;
+    display: flex;
+    align-items: center;
+}
+
+.search-container {
+    flex: 2;
+    display: flex;
+    position: relative;
+    margin-left: 310px;
+    margin-right: 20px;
+}
+
+.search-input {
+    flex: 1;
+    font-size: 15px;
+    font-family: Raleway, Arial;
+    font-weight: 500;
+    width: 0;
+    max-width: 400px;
+    caret-color: #1e6dce;
+    padding: 12px 12px 12px 50px;
+    border: 1px solid rgb(36, 36, 36);
+    border-radius: 4px;
+    transition: .15s;
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid rgb(76, 139, 216);
+}
+
+.search-input::placeholder {
+    font-size: 15px;
+    font-family: Raleway, Arial;
+    color: rgb(153, 153, 153);
+    opacity: 60%;
+    font-weight: 500;
+}
+
+.search-container i {
+    position: absolute;
+    top: 14px;
+    left: 17px;
+    color: rgba(0, 0, 0, .7);
+    cursor: pointer;
+    transition: color .15s;
+}
+
+.search-container input[type=text]:focus+i {
+    color: #1e6dce;
+}
+
+.right-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding-right: 20px;
+}
+
+.user-info-container {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    cursor: default;
+    margin-left: 10px;
+    transition: color .15s;
+    position: relative;
+    cursor: pointer;
+}
+
+.user-info-container .dropdown-content {
+    cursor: default;
+}
+
+.user-info-container:hover {
+    background-color: rgb(236, 236, 236);
+    color: #1e6dce;
+}
+
+.user-icon-container {
+    background-color: rgb(226, 226, 226);
+    height: 40px;
+    width: 40px;
+    border-radius: 30px;
+    margin-right: 10px;
+    z-index: 1;
+    position: relative;
+}
+
+.fa-user-gear {
+    position: absolute;
+    top: 19px;
+    left: 9px;
+    color: #1e6dce;
+}
+
+.user-accountid {
+    font-size: 17px;
+    font-weight: 600;
+    transition: .15s;
+    margin-right: 10px;
+    text-shadow: 0 2px 3px rgba(0, 0, 0, .3);
+}
+
+.user-accountid-dropdown {
+    display: none;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 8px 10px 8px 10px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    text-shadow: 0 2px 3px rgba(0, 0, 0, .3);
+    cursor: default;
+    transition: .15s;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 177px;
+    right: 0;
+    bottom: -89px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+    padding: 12px 8px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+
+/* .user-info-container:hover .dropdown-content {
+    display: block;
+} */
+
+.myaccount-btn,
+.logout-btn {
+    background-color: white;
+    font-family: Raleway, Arial;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    width: 100%;
+    padding: 8px 10px 8px 10px;
+    transition: .15s;
+    cursor: pointer;
+    text-align: left;
+}
+
+.myaccount-btn:hover,
+.logout-btn:hover {
+    background-color: rgba(190, 190, 190, 0.537);
+    color: #1e6dce;
+    border-radius: 3px;
+}
+
+.logout-btn a {
+    text-decoration: none;
+}
+
+.fa-circle-user {
+    margin-right: 6px;
+    color: green;
+}
+
+.fa-arrow-right-from-bracket {
+    margin-right: 6px;
+    color: rgb(255, 60, 0);
+}
+
+.fa-id-badge {
+    margin-right: 6px;
+    color: blue;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        padding: 100px 20px 100px 110px;
+    }
+    .search-container {
+        margin-left: 110px;
+    }
+    .logo-title-container {
+        justify-content: center;
+    }
+    .user-accountid {
+        display: none;
+        pointer-events: none;
+        position: absolute;
+    }
+    .user-icon-container {
+        margin-right: 0;
+    }
+    .dropdown-content {
+        left: -114px;
+        bottom: -133px;
+    }
+    .user-accountid-dropdown {
+        color: black;
+        display: block;
+    }
+}
+
+::-webkit-scrollbar {
+    height: 10px;
+    width: 10px;
+    background: rgb(182, 182, 182);
+}
+
+::-webkit-scrollbar-thumb:horizontal,
+::-webkit-scrollbar-thumb:vertical {
+    background-color: rgba(30, 109, 206, 0.76);
+    border-radius: 4px;
+}
