@@ -54,7 +54,8 @@
     <link rel="icon" type="image/x-icon" href="img/urslogo.png">
 
     <link rel="stylesheet" href="styles/signup-form.css">
-    <title>URS Archive | Sign up</title>
+    <title>SVCI Research and Development Archiving System | Sign up</title>
+
 </head>
 
 <body>
@@ -63,21 +64,21 @@
         <div class="left-section">
             <div>
                 <a href="index.php">
-                    <img src="img/urslogo.png" alt="" class="logo">
+                    <img src="img/svci_logo.png" alt="" class="logo">
                 </a>
             </div>
             <div class="welcome-sidebar">
-                <div class="welcome-label">URS Archive</div>
-                <div class="welcome-statement">Access most of the theses accomplished by University of Rizal System - Antipolo Campus students and alumnis.</div>
+                <div class="welcome-label">SVCI Research and Development Archiving System</div>
+                <div class="welcome-statement">Access most of the thesis accomplished by St. Vincent's College Incorported - students and alumnis.</div>
             </div>
         </div>
         <div class="right-section">
             <div class="header">
                 <div class="welcome-label-header-container">
                     <a href="index.php" class="link-index">
-                        <div class="welcome-label-header">URS Archive</div>
+                        <div class="welcome-label-header">SVCI Research and Development Archiving System</div>
                     </a>
-                    <div class="welcome-statement-header">Access most of the theses accomplished by University of Rizal System - Antipolo Campus students and alumnis.</div>
+                    <div class="welcome-statement-header">Access most of the thesis accomplished by St. Vincent's College Incorported - students and alumnis.</div>
                 </div>
             </div>
             <form action="" method="post">
