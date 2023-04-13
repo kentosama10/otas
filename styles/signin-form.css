@@ -30,8 +30,6 @@ p {
     max-height: 250px;
     object-position: center;
     object-fit: cover;
-    border-radius: 120px;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, .7);
     cursor: pointer;
 }
 
