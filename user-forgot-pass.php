@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="img/svci_logo.png">
 
     <link rel="stylesheet" href="styles/user-forgot-pass.css">
-    <title>SVCI Research and Development Archiving System | Sign in</title>
+    <title>SVCI Research and Development Archiving System | Forgot Password</title>
 
 </head>
 
