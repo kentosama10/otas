@@ -99,7 +99,7 @@ endif;
 
     <ul class="sidenav" id="mobile-links">
         <div class="sidebar-content">
-            <li>
+            <li> 
                 <a href="#" class="btn-large white black-text z-depth-0 left">
                     <span class="home-btn-sn">Home</span>
                     <i class="material-icons left green-text text-darken-4 home">home</i>

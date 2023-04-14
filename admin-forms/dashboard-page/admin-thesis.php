@@ -174,7 +174,7 @@ if (isset($_GET['id'])) {
                 <th class="abstract_header">Abstract</th>
                 <th class="author_header">Author</th>
                 <th class="department_header">Department</th>
-                <th class="course_header">Course</th>
+                <th class="course_header">Program</th>
                 <th class="year_header">Year of Publication</th>
                 <th class="date_header">Date Uploaded</th>
                 <th class="uploadedby_header">Uploaded By</th>
@@ -182,7 +182,7 @@ if (isset($_GET['id'])) {
             </tr>
 
             <?php
-            $sql = "SELECT id, title, abstract, author, department, course, year, date, uploaded_by from uploaded_thesis";
+            $sql = "SELECT id, title, abstract, author, department, program, year, date, uploaded_by from uploaded_thesis";
             $result = $con->query($sql);
 
             if ($result->num_rows > 0) {
@@ -194,7 +194,7 @@ if (isset($_GET['id'])) {
                                 <td>" . $row["abstract"] . "</td>
                                 <td>" . $row["author"] . "</td>
                                 <td>" . $row["department"] . "</td>
-                                <td>" . $row["course"] . "</td>
+                                <td>" . $row["program"] . "</td>
                                 <td>" . $row["year"] . "</td>
                                 <td>" . $row["date"] . "</td>
                                 <td>" . $row["uploaded_by"] . "</td>
@@ -247,7 +247,7 @@ if (isset($_GET['id'])) {
 
             <div class="dept-course-parent-container">
                 <div class="department-container">
-                    <div class="label">COLLEGE DEPARTMENT</div>
+                    <div class="label">DEPARTMENT</div>
                     <div class="data-input-container">
                         <select name="select_department" id="select_department" class="data-input" required>
                             <option value="SELECTION">Select department</option>
@@ -260,10 +260,10 @@ if (isset($_GET['id'])) {
                 </div>
 
                 <div class="course-container">
-                    <div class="label">COURSE</div>
+                    <div class="label">PROGRAM</div>
                     <div class="data-input-container">
                         <select name="select_course" id="select_course" class="data-input" disabled required>
-                            <option data-value="SELECTION" value="">Select course</option>
+                            <option data-value="SELECTION" value="">Select program</option>
                             <option data-value="COENG" value="BS Computer Engineering">BS Computer Engineering</option>
                             <option data-value="COENG" value="BS Civil Engineering">BS Civil Engineering</option>
                             <option data-value="COE" value="Bachelor of Elementary Education">Bachelor of Elementary
