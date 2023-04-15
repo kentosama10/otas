@@ -61,9 +61,9 @@ if (isset($_POST['save'])) {
     <div class="section-grid">
         <div class="left-section">
             <div>
-                <a href="index.php">
+
                     <img src="img/svci_logo.png" alt="" class="logo">
-                </a>
+
             </div>
             <div class="welcome-sidebar">
                 <div class="welcome-label">SVCI Research and Development Archiving System</div>

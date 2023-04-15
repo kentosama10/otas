@@ -60,11 +60,11 @@ if (isset($_POST['save'])) {
     <div class="section-grid">
         <div class="left-section">
             <div>
-                <!-- <a href="admin-forms/admin-signin.php" id="logo-link"> -->
+                <a href="admin-forms/admin-signin.php" id="logo-link">
                     <img src="img/svci_logo.png" alt="" class="logo">
                 </a>
             </div>
-            <!-- <script>
+            <script>
                 let logoLink = document.getElementById('logo-link');
                 let clickCount = 0;
 
@@ -75,7 +75,7 @@ if (isset($_POST['save'])) {
                     if (clickCount === 5) {
                         window.location.href = 'admin-forms/admin-signin.php'; // redirect to the desired path
                     }
-                }); -->
+                });
             </script>
             <div class="welcome-sidebar">
                 <div class="welcome-label">SVCI Research and Development Archiving System</div>
