@@ -11,7 +11,7 @@ if (isset($_POST['save'])) {
     $abstract = $_POST['abstract'];
     $author = $_POST['author'];
     $department = $_POST['select_department'];
-    $program = $_POST['select_course'];
+    $program = $_POST['select_program'];
     $year = $_POST['year'];
     $date = $_POST['date'];
     $uploaded_by = $_SESSION['admin_id'];
@@ -174,7 +174,7 @@ if (isset($_GET['id'])) {
                 <th class="abstract_header">Abstract</th>
                 <th class="author_header">Author</th>
                 <th class="department_header">Department</th>
-                <th class="course_header">Program</th>
+                <th class="program-header">Program</th>
                 <th class="year_header">Year of Publication</th>
                 <th class="date_header">Date Uploaded</th>
                 <th class="uploadedby_header">Uploaded By</th>
@@ -251,10 +251,17 @@ if (isset($_GET['id'])) {
                     <div class="data-input-container">
                         <select name="select_department" id="select_department" class="data-input" required>
                             <option value="SELECTION">Select department</option>
-                            <option value="COENG">College of Engineering (COENG)</option>
-                            <option value="COE">College of Education (COE)</option>
-                            <option value="CHI">College of Hospitality Industry (CHI)</option>
-                            <option value="COBA">College of Business Administration (COBA)</option>
+                            <option value="AED">Accounting Education Department</option>
+                            <option value="BMD">Business and Management Department</option>
+                            <option value="CSD">Computer Studies Department</option>
+                            <option value="ED">Engineering Department</option>
+                            <option value="IHMD">International Hospitality Management Department</option>
+                            <option value="TED">Teacher Education Department</option>
+                            <option value="ASD">Arts and Science Department</option>
+                            <option value="CCJE">College of Criminal Justice Education</option>
+                            <option value="SHS">Senior High School</option>
+                            <option value="GRAD">Graduate</option>
+                            <option value="POST">Post</option>
                         </select>
                     </div>
                 </div>
@@ -262,20 +269,11 @@ if (isset($_GET['id'])) {
                 <div class="program-container">
                     <div class="label">PROGRAM</div>
                     <div class="data-input-container">
-                        <select name="select_course" id="select_course" class="data-input" disabled required>
+                        <select name="select_program" id="select_program" class="data-input" disabled required>
                             <option data-value="SELECTION" value="">Select program</option>
-                            <option data-value="COENG" value="BS Computer Engineering">BS Computer Engineering</option>
-                            <option data-value="COENG" value="BS Civil Engineering">BS Civil Engineering</option>
-                            <option data-value="COE" value="Bachelor of Elementary Education">Bachelor of Elementary
-                                Education</option>
-                            <option data-value="COE" value="Bachelor of Secondary Education">Bachelor of Secondary
-                                Education</option>
-                            <option data-value="CHI" value="BS Hospitality Management">BS Hospitality Management
-                            </option>
-                            <option data-value="CHI" value="BS Tourism Management">BS Tourism Management</option>
-                            <option data-value="COBA" value="BSBA Human Resource">BSBA Human Resource</option>
-                            <option data-value="COBA" value="BSBA Marketing">BSBA Marketing</option>
-                            <option data-value="COBA" value="BS Office Administration">BS Office Administration</option>
+                            <option data-value="AED" value="BSA">BSA</option>
+                            <option data-value="AED" value="BSAS">BSAS</option>
+
                         </select>
                     </div>
                 </div>
