@@ -11,7 +11,7 @@ if (isset($_POST['save'])) {
     $abstract = $_POST['abstract'];
     $author = $_POST['author'];
     $department = $_POST['select_department'];
-    $course = $_POST['select_course'];
+    $program = $_POST['select_course'];
     $year = $_POST['year'];
     $date = $_POST['date'];
     $uploaded_by = $_SESSION['admin_id'];
@@ -24,7 +24,7 @@ if (isset($_POST['save'])) {
                         window.location.replace('admin-thesis.php');
                     </script>";
     } else {
-        $sqladmin_query = "INSERT INTO uploaded_thesis (title, abstract, author, department, course, year, date, uploaded_by) VALUES ('$title', '$abstract', '$author',' $department',' $course', '$year', '$date', '$uploaded_by')";
+        $sqladmin_query = "INSERT INTO uploaded_thesis (title, abstract, author, department, program, year, date, uploaded_by) VALUES ('$title', '$abstract', '$author',' $department',' $program', '$year', '$date', '$uploaded_by')";
         $result = $con->query($sqladmin_query);
 
         echo "<script>
@@ -245,7 +245,7 @@ if (isset($_GET['id'])) {
                 </div>
             </div>
 
-            <div class="dept-course-parent-container">
+            <div class="dept-program-parent-container">
                 <div class="department-container">
                     <div class="label">DEPARTMENT</div>
                     <div class="data-input-container">
@@ -259,7 +259,7 @@ if (isset($_GET['id'])) {
                     </div>
                 </div>
 
-                <div class="course-container">
+                <div class="program-container">
                     <div class="label">PROGRAM</div>
                     <div class="data-input-container">
                         <select name="select_course" id="select_course" class="data-input" disabled required>

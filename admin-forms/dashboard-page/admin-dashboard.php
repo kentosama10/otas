@@ -7,7 +7,7 @@ session_start();
         header('Location: ../admin-signin.php');
     endif;
 
-    $sql_query = "SELECT course, count(8) as number FROM uploaded_thesis GROUP BY course";
+    $sql_query = "SELECT program, count(8) as number FROM uploaded_thesis GROUP BY program";
     $result = $con->query($sql_query);
 
 ?>
@@ -194,7 +194,7 @@ session_start();
                 </div>
             </div>
 
-            <div class="course-container">
+            <div class="program-container">
                 <div class="chart-title-container-cour">
                     <div class="chart-title">
                         Uploaded Thesis: <strong>Filtered by  Program</strong>

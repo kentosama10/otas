@@ -9,11 +9,11 @@
                 ['Course', 'Number'],  
                 <?php  
 
-                $sql_query = "SELECT course, count(*) as number FROM uploaded_thesis GROUP BY course";
+                $sql_query = "SELECT program, count(*) as number FROM uploaded_thesis GROUP BY program";
                 $result = $con->query($sql_query);
 
                     while($row = mysqli_fetch_array($result)){  
-                        echo "['".$row["course"]."', ".$row["number"]."],";  
+                        echo "['".$row["program"]."', ".$row["number"]."],";  
                           }  
                 ?>  
             ]);  

@@ -43,13 +43,13 @@ endif;
                     </a>
                 </li>
 
-                <li id="course">
+                <li id="program">
                     <a href="# " data-target="dropdown"
                         class="courses-btn dropdown-trigger btn-large white waves-effect waves-dark z-depth-0">
                         <span>Programs</span>
                         <i class="material-icons right arrow-icon">arrow_drop_down</i>
                     </a>
-                    <ul class="dropdown-content dropdown-course" id="dropdown">
+                    <ul class="dropdown-content dropdown-program" id="dropdown">
                         <li><a href="#">BSCPE</a></li>
                         <li><a href="#">BSCE</a></li>
                         <li><a href="#">BEED</a></li>
@@ -107,13 +107,13 @@ endif;
             </li>
 
             <li>
-                <a href="# " data-target="dropdown-course-sidenav"
+                <a href="# " data-target="dropdown-program-sidenav"
                     class="dropdown-trigger-sidenav btn-large white black-text z-depth-0 left ">
                     <span class="courses-btn-sn">Courses</span>
                     <i class="material-icons left orange-text text-darken-4 list">list</i>
                     <i class="material-icons right arrow-icon">arrow_drop_down</i>
                 </a>
-                <ul class="dropdown-content dropdown-course-sidenav" id="dropdown-course-sidenav">
+                <ul class="dropdown-content dropdown-program-sidenav" id="dropdown-program-sidenav">
                     <li><a href="# ">BSCPE</a></li>
                     <li><a href="# ">BSCE</a></li>
                     <li><a href="# ">BEED</a></li>

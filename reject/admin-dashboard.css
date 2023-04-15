@@ -426,7 +426,7 @@ input:focus {
 }
 
 .department-container,
-.course-container,
+.program-container,
 .experts-end-users-container {
     flex: 1;
     position: relative;
@@ -438,7 +438,7 @@ input:focus {
 }
 
 .department-container,
-.course-container,
+.program-container,
 .experts-end-users-container {
     background-color: white;
     flex: 1;

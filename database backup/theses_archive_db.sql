@@ -57,7 +57,7 @@ CREATE TABLE `uploaded_thesis` (
   `abstract` longtext NOT NULL,
   `author` varchar(255) NOT NULL,
   `department` varchar(255) NOT NULL,
-  `course` varchar(255) NOT NULL,
+  `program` varchar(255) NOT NULL,
   `year` year(4) NOT NULL,
   `date` date NOT NULL,
   `uploaded_by` varchar(255) NOT NULL
@@ -67,7 +67,7 @@ CREATE TABLE `uploaded_thesis` (
 -- Dumping data for table `uploaded_thesis`
 --
 
-INSERT INTO `uploaded_thesis` (`id`, `title`, `abstract`, `author`, `department`, `course`, `year`, `date`, `uploaded_by`) VALUES
+INSERT INTO `uploaded_thesis` (`id`, `title`, `abstract`, `author`, `department`, `program`, `year`, `date`, `uploaded_by`) VALUES
 (11, 'Sample', 'Sample', 'Sample', ' CHI', ' BS Tourism Management', 2022, '2022-09-08', 'Christian'),
 (12, 'CHI TITLE', 'CHI ABSTRACT', 'CHI', ' CHI', ' BS Tourism Management', 2022, '2022-09-08', 'Christian'),
 (13, 'COBA', 'COBA', 'COBA', ' COBA', ' BS Office Administration', 2022, '2022-09-08', 'Christian');
