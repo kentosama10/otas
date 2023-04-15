@@ -239,7 +239,7 @@ endif;
     <div class="footer-panel">
         <footer class="page-footer white">
             <hr>
-            <p class="footer-text black-text">&copy; 2023 <strong>ALEMANSUM:</strong> Group 7 - SVCI Research and Development Archiving System</p>
+            <p class="footer-text black-text">&copy; 2023 <strong>ALEMANSUM:</strong> <a href="devs.php">Group 7</a> - SVCI Research and Development Archiving System</p>
         </footer>
     </div>
 
