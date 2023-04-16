@@ -50,15 +50,47 @@ endif;
                         <i class="material-icons right arrow-icon">arrow_drop_down</i>
                     </a>
                     <ul class="dropdown-content dropdown-program" id="dropdown">
-                        <li><a href="#">BSCPE</a></li>
+                        <li><a href="#">BSA</a></li>
+                        <li><a href="#">BSAIS</a></li>
+                        <li><a href="#">BSBA Major in Financial Management</a></li>
+                        <li><a href="#">BSBA Major in Human Resource Management</a></li>
+                        <li><a href="#">BSBA Major in Marketing Management</a></li>
+                        <li><a href="#">BSBA Major in Marketing Management</a></li>
+                        <li><a href="#">BSIT</a></li>
+                        <li><a href="#">BSCS</a></li>
                         <li><a href="#">BSCE</a></li>
-                        <li><a href="#">BEED</a></li>
-                        <li><a href="#">BSE</a></li>
-                        <li><a href="#">BSBA Human Resource</a></li>
-                        <li><a href="#">BSBA Marketing</a></li>
+                        <li><a href="#">BSIT</a></li>
+                        <li><a href="#">BSCS</a></li>
+                        <li><a href="#">BSCE</a></li>
+                        <li><a href="#">BSIT</a></li>
+                        <li><a href="#">BSCS</a></li>
                         <li><a href="#">BSOA</a></li>
                         <li><a href="#">BSHM</a></li>
                         <li><a href="#">BSTM</a></li>
+                        <li><a href="#">BEEd</a></li>
+                        <li><a href="#">BPEd</a></li>
+                        <li><a href="#">BSNEd</a></li>
+                        <li><a href="#">BSEd Major in Religious Education</a></li>
+                        <li><a href="#">BSEd Major in Major in English</a></li>
+                        <li><a href="#">BSEd Major in Religious Major in Filipino</a></li>
+                        <li><a href="#">BSEd Major in Mathematics</a></li>
+                        <li><a href="#">BAPS</a></li>
+                        <li><a href="#">BAPhilo</a></li>
+                        <li><a href="#">BSCrim</a></li>
+                        <li><a href="#">ABM</a></li>
+                        <li><a href="#">STEM</a></li>
+                        <li><a href="#">HUMMS</a></li>
+                        <li><a href="#">GAS</a></li>
+                        <li><a href="#">MAEd</a></li>
+                        <li><a href="#">MPM</a></li>
+                        <li><a href="#">MBA</a></li>
+                        <li><a href="#">ME Major in English</a></li>
+                        <li><a href="#">ME Major in Filipino</a></li>
+                        <li><a href="#">ME Major in Mathematics</a></li>
+                        <li><a href="#">ME Major in Physical Education</a></li>
+                        <li><a href="#">ME Major in Science</a></li>
+                        <li><a href="#">ME Major in Social Studies</a></li>
+                        <li><a href="#">DEM</a></li>
                     </ul>
                 </li>
 

@@ -261,7 +261,7 @@ if (isset($_GET['id'])) {
                             <option value="CCJE">College of Criminal Justice Education</option>
                             <option value="SHS">Senior High School</option>
                             <option value="GRAD">Graduate</option>
-                            <option value="POST">Post</option>
+                            <option value="POST">Post Graduate</option>
                         </select>
                     </div>
                 </div>
