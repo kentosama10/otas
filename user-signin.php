@@ -1,46 +1,43 @@
 <?php
-    session_start();
+session_start();
 
-    include 'components/connections.php'; 
+include 'components/connections.php';
 
-    if(isset($_SESSION['id'])) {
-        echo "<script>window.location.replace('index.php');</script>";
-    }
+if (isset($_SESSION['id'])) {
+    echo "<script>window.location.replace('index.php');</script>";
+}
 
-    if(isset($_POST['save']))
-    
-    { 
-        $username = $_POST['username']; 
-        $password = $_POST['password'];
-    
+if (isset($_POST['save'])) {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
     $success = false;
-    
-        $sql_query = "SELECT * FROM user_accounts WHERE username = '$username' AND password = '$password'";
-        $result = $con->query($sql_query);
 
-            if ($result->num_rows > 0) {
-                while($row = $result->fetch_assoc()) {
-                    if($row["username"] > 0)
-                        {   
-                            $success = true;
-                            $_SESSION["id"] = $row["username"];
-                        }
-                    }
-                }
-    if ($success == true){     
+    $sql_query = "SELECT * FROM user_accounts WHERE username = '$username' AND password = '$password'";
+    $result = $con->query($sql_query);
+
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            if ($row["username"] > 0) {
+                $success = true;
+                $_SESSION["id"] = $row["username"];
+            }
+        }
+    }
+    if ($success == true) {
         echo "<script>
         window.location.replace('index.php');
         </script>";
-    }                                        
-    else {
-    
-    echo "<script>
+    } else {
+
+        echo "<script>
                 alert('Wrong Username or Password!')
                 window.location.replace('user-signin.php');
     </script>";
     }
-    mysqli_close($con); 
-    }
+    mysqli_close($con);
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -52,9 +49,9 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/signin-form.css">
-    <link rel="icon" type="image/x-icon" href="img/urslogo.png">
+    <link rel="icon" type="image/x-icon" href="img/svci_logo.png">
 
-    <title>URS Archive | Sign in</title>
+    <title>SVCI Research and Development Archiving System | Sign in</title>
 
 </head>
 
@@ -63,22 +60,37 @@
     <div class="section-grid">
         <div class="left-section">
             <div>
-                <a href="index.php">
-                    <img src="img/urslogo.png" alt="" class="logo">
+                <a href="admin-forms/admin-signin.php" id="logo-link">
+                    <img src="img/svci_logo.png" alt="" class="logo">
                 </a>
             </div>
+            <script>
+                let logoLink = document.getElementById('logo-link');
+                let clickCount = 0;
+
+                logoLink.addEventListener('click', function (event) {
+                    event.preventDefault(); // prevent default link behavior
+                    clickCount++;
+
+                    if (clickCount === 5) {
+                        window.location.href = 'admin-forms/admin-signin.php'; // redirect to the desired path
+                    }
+                });
+            </script>
             <div class="welcome-sidebar">
-                <div class="welcome-label">URS Archive</div>
-                <div class="welcome-statement">Access most of the theses accomplished by University of Rizal System - Antipolo Campus students and alumnis.</div>
+                <div class="welcome-label">SVCI Research and Development Archiving System</div>
+                <div class="welcome-statement">Access most of the thesis accomplished by St. Vincent's College
+                    Incorported - students and alumnis.</div>
             </div>
         </div>
         <div class="right-section">
             <div class="header">
                 <div class="welcome-label-header-container">
                     <a href="index.php" class="link-index">
-                        <div class="welcome-label-header">URS Archive</div>
+                        <div class="welcome-label-header">SVCI Research and Development Archiving System</div>
                     </a>
-                    <div class="welcome-statement-header">Access most of the theses accomplished by University of Rizal System - Antipolo Campus students and alumnis.</div>
+                    <div class="welcome-statement-header">Access most of the thesis accomplished by St. Vincent's
+                        College Incorported - students and alumnis.</div>
                 </div>
             </div>
             <form action="" method="post">
@@ -89,14 +101,17 @@
                     <div class="signin-form">
 
                         <div class="signin-input-container">
-                            <input type="text" class="signin-input-username" placeholder="Username" name="username" required>
+                            <input type="text" class="signin-input-username" placeholder="Username" name="username"
+                                required>
                         </div>
 
                         <div class="signin-input-container">
-                            <input type="password" class="signin-input-password" placeholder="Password" name="password" id="signin-input-password" required>
+                            <input type="password" class="signin-input-password" placeholder="Password" name="password"
+                                id="signin-input-password" required>
                         </div>
 
-                        <input type="checkbox" id="show-password-button" class="show-password-button" onclick="myFunction()">
+                        <input type="checkbox" id="show-password-button" class="show-password-button"
+                            onclick="myFunction()">
                         <label for="show-password-button" class="show-password-label">Show password</label>
 
                         <div class="signin-input-container">

@@ -3,7 +3,7 @@
 $dbhost = "localhost";
 $dbuser = "root";
 $dbpass = "";
-$dbname = "theses_archive_db";
+$dbname = "thesis_archive_db";
 
 if (!$con = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname)) 
 {

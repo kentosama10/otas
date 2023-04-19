@@ -145,7 +145,7 @@ session_start();
                 </div>
             </div>
 
-            <div class="course-container">
+            <div class="program-container">
                 <div class="chart-title-container-cour">
                     <div class="chart-title">
                         Uploaded Theses: <strong>Course</strong>

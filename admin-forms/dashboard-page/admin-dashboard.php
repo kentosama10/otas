@@ -7,7 +7,7 @@ session_start();
         header('Location: ../admin-signin.php');
     endif;
 
-    $sql_query = "SELECT course, count(8) as number FROM uploaded_thesis GROUP BY course";
+    $sql_query = "SELECT program, count(8) as number FROM uploaded_thesis GROUP BY program";
     $result = $con->query($sql_query);
 
 ?>
@@ -37,9 +37,9 @@ session_start();
     <link rel="stylesheet" href="../styles/dashboard-styles/left-nav.css">
     <link rel="stylesheet" href="../styles/dashboard-styles/tables-charts.css">
 
-    <link rel="icon" type="image/x-icon" href="../img/urslogo.png">
+    <link rel="icon" type="image/x-icon" href="../img/svci_logo.png">
 
-    <title>URS Archive | Dashboard</title>
+    <title>SVCI Research and Development Archiving System | Dashboard</title>
 
 </head>
 
@@ -91,7 +91,7 @@ session_start();
 
     <div class="left-nav ">
         <div class="logo-title-container ">
-            <img src="../img/urslogo.png" alt=" " class="urslogo ">
+            <img src="../img/svci_logo.png" alt=" " class="svcilogo ">
             <p class="title ">ADMINISTRATOR</p>
         </div>
 
@@ -107,7 +107,7 @@ session_start();
         <a href="admin-thesis.php" class="general-link ">
             <div class="list-container ">
                 <i class="fa-solid fa-list-check fa-lg "></i>
-                <p class="list-button ">Uploaded Theses
+                <p class="list-button ">Uploaded Thesis
                     <i class="fa-solid fa-angle-right arrow-icon "></i>
                 </p>
             </div>
@@ -136,7 +136,7 @@ session_start();
         <div class="table-container">
             <div class="thesis-container">
                 <div class="table-title">
-                    Total Uploaded Theses
+                    Total Uploaded Thesis
                 </div>
                 <div class="total-count">
                 <?php
@@ -186,7 +186,7 @@ session_start();
             <div class="department-container">
                 <div class="chart-title-container-dept">
                     <div class="chart-title">
-                        Uploaded Theses: <strong>Filtered by College Department</strong>
+                        Uploaded Thesis: <strong>Filtered by College Department</strong>
                     </div>
                 </div>
                 <div id="chart_wrap">
@@ -194,10 +194,10 @@ session_start();
                 </div>
             </div>
 
-            <div class="course-container">
+            <div class="program-container">
                 <div class="chart-title-container-cour">
                     <div class="chart-title">
-                        Uploaded Theses: <strong>Filtered by  Course</strong>
+                        Uploaded Thesis: <strong>Filtered by  Program</strong>
                     </div>
                 </div>            
                 <div id="chart_wrap">
