@@ -16,21 +16,45 @@ if (isset($_POST['save'])) {
     $date = $_POST['date'];
     $uploaded_by = $_SESSION['admin_id'];
 
+    // Check if thesis with same title or abstract already exists
     $sqladmin = "SELECT title FROM uploaded_thesis WHERE title = '$title' OR abstract = '$abstract'";
     $result = $con->query($sqladmin);
     if ($result->num_rows > 0) {
         echo "<script>
-                        alert('Some information already existing!')
+                        alert('Some information already exists!')
                         window.location.replace('admin-thesis.php');
                     </script>";
     } else {
-        $sqladmin_query = "INSERT INTO uploaded_thesis (title, abstract, author, department, program, year, date, uploaded_by) VALUES ('$title', '$abstract', '$author',' $department',' $program', '$year', '$date', '$uploaded_by')";
+        // Insert new thesis record
+        $sqladmin_query = "INSERT INTO uploaded_thesis (title, abstract, author, department, program, year, date, uploaded_by) VALUES ('$title', '$abstract', '$author', '$department', '$program', '$year', '$date', '$uploaded_by')";
         $result = $con->query($sqladmin_query);
 
-        echo "<script>
+        // Upload file
+        $file_name = $_FILES['file']['name'];
+        $file_size = $_FILES['file']['size'];
+        $file_tmp = $_FILES['file']['tmp_name'];
+        $file_type = $_FILES['file']['type'];
+        $file_ext = strtolower(pathinfo($file_name, PATHINFO_EXTENSION));
+        $extensions = array("pdf", "doc", "docx");
+        if (in_array($file_ext, $extensions) && $file_size <= 5242880) {
+            $new_file_name = uniqid('', true) . '.' . $file_ext;
+            move_uploaded_file($file_tmp, '../uploads/' . $new_file_name);
+
+            // Update the file name in the database
+            $thesis_id = $con->insert_id;
+            $update_query = "UPDATE uploaded_thesis SET file_name = '$new_file_name' WHERE id = '$thesis_id'";
+            $con->query($update_query);
+
+            echo "<script>
                     alert('Record successfully uploaded!')
                     window.location.replace('admin-thesis.php');
                 </script>";
+        } else {
+            echo "<script>
+                    alert('Error uploading file. Please ensure that the file is in PDF, DOC, or DOCX format and is less than 5MB.')
+                    window.location.replace('admin-thesis.php');
+                </script>";
+        }
     }
 }
 
@@ -38,9 +62,9 @@ if (isset($_GET['id'])) {
     $id = $_GET['id'];
     $delete_query = "DELETE FROM uploaded_thesis WHERE id = '$id'";
     $delete = $con->query($delete_query);
-
 }
 ?>
+
 
 <!DOCTYPE html>
 
@@ -213,7 +237,7 @@ if (isset($_GET['id'])) {
 
     <div class="form-label" id="label-div">CREATE NEW / MODIFY RECORD</div>
     <div class="form-container" id="form-div">
-        <form action="" method="post">
+        <form action="" method="post" enctype="multipart/form-data">
             <input type="hidden" class="data-input" name="id" placeholder="ID" required>
 
             <div class="title-parent-container">
@@ -346,17 +370,15 @@ if (isset($_GET['id'])) {
             </div>
 
 
-            <form action="upload.php" method="post" enctype="multipart/form-data">
-                <div class="author-parent-container">
-                    <div class="author-container">
-                        <div class="label">UPLOAD FILE</div>
-                        <div class="data-input-container">
-                            <input type="file" class="data-input" name="file">
-                        </div>
+            <div class="author-parent-container">
+                <div class="author-container">
+                    <div class="label">UPLOAD FILE</div>
+                    <div class="data-input-container">
+                        <input type="file" class="data-input" name="file">
                     </div>
                 </div>
-                <input type="submit" value="Save" name="save">
-            </form>
+            </div>
+
 
 
 
