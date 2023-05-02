@@ -131,7 +131,7 @@ endif;
 
     <ul class="sidenav" id="mobile-links">
         <div class="sidebar-content">
-            <li> 
+            <li>
                 <a href="#" class="btn-large white black-text z-depth-0 left">
                     <span class="home-btn-sn">Home</span>
                     <i class="material-icons left green-text text-darken-4 home">home</i>
@@ -199,19 +199,22 @@ endif;
             <div class="ursbanner-container col s12 l9 hide-on-down">
                 <img src="img/svci_banner.png" alt="urs-banner" class="svcibanner">
             </div>
-            <div class="search-section col s12 m10 l3 offset-m1 left">
-                <h6 class="search-title">Explore research</h6>
-                <h6 class="search-statement">Access most of the thesis accomplished by St. Vincent's College Incorported
-                    - students and alumnis.</h6>
-                <div class="row">
-                    <div class="input-field s12">
-                        <div class="search-container ">
-                            <input type="text" class="search-input" placeholder="Search publications">
-                            <i class="fa-solid fa-magnifying-glass"></i>
+            <form action="result.php" method="get">
+                <div class="search-section col s12 m10 l3 offset-m1 left">
+                    <h6 class="search-title">Explore research</h6>
+                    <h6 class="search-statement">Access most of the thesis accomplished by St. Vincent's College
+                        Incorported
+                        - students and alumnis.</h6>
+                    <div class="row">
+                        <div class="input-field s12">
+                            <div class="search-container ">
+                                <input type="text" class="search-input" placeholder="Search publications">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </form>
         </div>
 
         <div class="row ursvmco">
@@ -271,7 +274,8 @@ endif;
     <div class="footer-panel">
         <footer class="page-footer white">
             <hr>
-            <p class="footer-text black-text">&copy; 2023 <strong>ALEMANSUM:</strong> <a href="devs.php">Group 7</a> - SVCI Research and Development Archiving System</p>
+            <p class="footer-text black-text">&copy; 2023 <strong>ALEMANSUM:</strong> <a href="devs.php">Group 7</a> -
+                SVCI Research and Development Archiving System</p>
         </footer>
     </div>
 

@@ -1,6 +1,6 @@
 <?php
 session_start();
-include '../components/connections.php'; 
+include '../components/connections.php';
 
 if (empty($_SESSION['admin_id'])):
     header('Location: ../admin-signin.php');
@@ -251,17 +251,20 @@ if (isset($_GET['id'])) {
                     <div class="data-input-container">
                         <select name="select_department" id="select_department" class="data-input" required>
                             <option value="SELECTION">Select department</option>
-                            <option value="Accounting Education Department">Accounting Education Department</option>
-                            <option value="Business and Management Department">Business and Management Department</option>
-                            <option value="Computer Studies Department">Computer Studies Department</option>
-                            <option value="Engineering Department">Engineering Department</option>
-                            <option value="International Hospitality Management Department">International Hospitality Management Department</option>
-                            <option value="Teacher Education Department">Teacher Education Department</option>
-                            <option value="Arts and Science Department">Arts and Science Department</option>
-                            <option value="College of Criminal Justice Education">College of Criminal Justice Education</option>
-                            <option value="Senior High School">Senior High School</option>
+                            <option value="Accounting-Education-Department">Accounting Education Department</option>
+                            <option value="Business-and-Management-Department">Business and Management Department
+                            </option>
+                            <option value="Computer-Studies-Department">Computer Studies Department</option>
+                            <option value="Engineering-Department">Engineering Department</option>
+                            <option value="International-Hospitality-Management-Department">International Hospitality
+                                Management Department</option>
+                            <option value="Teacher-Education-Department">Teacher Education Department</option>
+                            <option value="Arts-and-Science-Department">Arts and Science Department</option>
+                            <option value="College-of-Criminal-Justice-Education">College of Criminal Justice Education
+                            </option>
+                            <option value="Senior-High-School">Senior High School</option>
                             <option value="Graduate">Graduate</option>
-                            <option value="Post Graduate">Post Graduate</option>
+                            <option value="Post-Graduate">Post Graduate</option>
                         </select>
                     </div>
                 </div>
@@ -271,42 +274,57 @@ if (isset($_GET['id'])) {
                     <div class="data-input-container">
                         <select name="select_program" id="select_program" class="data-input" disabled required>
                             <option data-value="SELECTION" value="">Select program</option>
-                            <option data-value="Accounting Education Department"value="BSA">BSA</option>
-                            <option data-value="Accounting Education Department"value="BSAS">BSAIS</option>
-                            <option data-value="Business and Management Department"value="BSBA Major in Financial Management">BSBA Major in Financial Management</option>
-                            <option data-value="Business and Management Department"value="BSBA Major in Human Resource Management">BSBA Major in Human Resource Management</option>
-                            <option data-value="Business and Management Department"value="BSBA Major in Marketing Management">BSBA Major in Marketing Management</option>
-                            <option data-value="Business and Management Department"value="BSBA Major in Marketing Management">BSBA Major in Marketing Management</option>
-                            <option data-value="Computer Studies Department"value="BSIT">BSIT</option>
-                            <option data-value="Computer Studies Department"value="BSCS">BSCS</option>
-                            <option data-value="Engineering Department"value="BSCE">BSCE</option>
-                            <option data-value="International Hospitality Management Department"value="BSOA">BSOA</option>
-                            <option data-value="International Hospitality Management Department"value="BSHM">BSHM</option>
-                            <option data-value="International Hospitality Management Department"value="BSTM">BSTM</option>
-                            <option data-value="Teacher Education Department"value="BEEd">BEEd</option>
-                            <option data-value="Teacher Education Department"value="BPEd">BPEd</option>
-                            <option data-value="Teacher Education Department"value="BSNEd">BSNEd</option>
-                            <option data-value="Teacher Education Department"value="BSEd Major in Religious Education">BSEd Major in Religious Education</option>
-                            <option data-value="Teacher Education Department"value="BSEd Major in Major in English">BSEd Major in Major in English</option>
-                            <option data-value="Teacher Education Department"value="BSEd Major in Major in Filipino">BSEd Major in Religious Major in Filipino</option>
-                            <option data-value="Teacher Education Department"value="BSEd Major in Major in Mathematics">BSEd Major in Mathematics</option>
-                            <option data-value="Arts and Science Department"value="BAPS">BAPS</option>
-                            <option data-value="Arts and Science Department"value="BAPhilo">BAPhilo</option>
-                            <option data-value="College of Criminal Justice Education" value="BSCrim">BSCrim</option>
-                            <option data-value="Senior High School"value="ABM">ABM</option>
-                            <option data-value="Senior High School"value="STEM">STEM</option>
-                            <option data-value="Senior High School"value="HUMMS">HUMMS</option>
-                            <option data-value="Senior High School"value="GAS">GAS</option>
-                            <option data-value="Graduate"value="MAEd">MAEd</option>
-                            <option data-value="Graduate"value="MPM">MPM</option>
-                            <option data-value="Graduate"value="MBA">MBA</option>
-                            <option data-value="Graduate"value="ME Major in English">ME Major in English</option>
-                            <option data-value="Graduate"value="ME Major in English">ME Major in Filipino</option>
-                            <option data-value="Graduate"value="ME Major in English">ME Major in Mathematics</option>
-                            <option data-value="Graduate"value="ME Major in English">ME Major in Physical Education</option>
-                            <option data-value="Graduate"value="ME Major in English">ME Major in Science</option>
-                            <option data-value="Graduate"value="ME Major in English">ME Major in Social Studies</option>
-                            <option data-value="Post Graduate"value="Doctor Educational Management">Doctor Educational Management</option>
+                            <option data-value="Accounting-Education-Department" value="BSA">BSA</option>
+                            <option data-value="Accounting-Education-Department" value="BSAS">BSAIS</option>
+                            <option data-value="Business-and-Management-Department"
+                                value="BSBA Major in Financial Management">BSBA Major in Financial Management</option>
+                            <option data-value="Business-and-Management-Department"
+                                value="BSBA Major in Human Resource Management">BSBA Major in Human Resource Management
+                            </option>
+                            <option data-value="Business-and-Management-Department"
+                                value="BSBA Major in Marketing Management">BSBA Major in Marketing Management</option>
+                            <option data-value="Business-and-Management-Department"
+                                value="BSBA Major in Marketing Management">BSBA Major in Marketing Management</option>
+                            <option data-value="Computer-Studies-Department" value="BSIT">BSIT</option>
+                            <option data-value="Computer-Studies-Department" value="BSCS">BSCS</option>
+                            <option data-value="Engineering-Department" value="BSCE">BSCE</option>
+                            <option data-value="International-Hospitality-Management-Department" value="BSOA">BSOA
+                            </option>
+                            <option data-value="International-Hospitality-Management-Department" value="BSHM">BSHM
+                            </option>
+                            <option data-value="International-Hospitality-Management-Department" value="BSTM">BSTM
+                            </option>
+                            <option data-value="Teacher-Education-Department" value="BEEd">BEEd</option>
+                            <option data-value="Teacher-Education-Department" value="BPEd">BPEd</option>
+                            <option data-value="Teacher-Education-Department" value="BSNEd">BSNEd</option>
+                            <option data-value="Teacher-Education-Department" value="BSEd Major in Religious Education">
+                                BSEd Major in Religious Education</option>
+                            <option data-value="Teacher-Education-Department" value="BSEd Major in Major in English">
+                                BSEd Major in Major in English</option>
+                            <option data-value="Teacher-Education-Department" value="BSEd Major in Major in Filipino">
+                                BSEd Major in Religious Major in Filipino</option>
+                            <option data-value="Teacher-Education-Department"
+                                value="BSEd Major in Major in Mathematics">BSEd Major in Mathematics</option>
+                            <option data-value="Arts-and-Science-Department" value="BAPS">BAPS</option>
+                            <option data-value="Arts-and-Science-Department" value="BAPhilo">BAPhilo</option>
+                            <option data-value="College-of-Criminal-Justice-Education" value="BSCrim">BSCrim</option>
+                            <option data-value="Senior-High-School" value="ABM">ABM</option>
+                            <option data-value="Senior-High-School" value="STEM">STEM</option>
+                            <option data-value="Senior-High-School" value="HUMMS">HUMMS</option>
+                            <option data-value="Senior-High-School" value="GAS">GAS</option>
+                            <option data-value="Graduate" value="MAEd">MAEd</option>
+                            <option data-value="Graduate" value="MPM">MPM</option>
+                            <option data-value="Graduate" value="MBA">MBA</option>
+                            <option data-value="Graduate" value="ME Major in English">ME Major in English</option>
+                            <option data-value="Graduate" value="ME Major in English">ME Major in Filipino</option>
+                            <option data-value="Graduate" value="ME Major in English">ME Major in Mathematics</option>
+                            <option data-value="Graduate" value="ME Major in English">ME Major in Physical Education
+                            </option>
+                            <option data-value="Graduate" value="ME Major in English">ME Major in Science</option>
+                            <option data-value="Graduate" value="ME Major in English">ME Major in Social Studies
+                            </option>
+                            <option data-value="Post-Graduate" value="Doctor Educational Management">Doctor Educational
+                                Management</option>
                         </select>
                     </div>
                 </div>
@@ -328,14 +346,20 @@ if (isset($_GET['id'])) {
             </div>
 
 
-            <div class="author-parent-container">
-                <div class="author-container">
-                    <div class="label">UPLOAD FILE</div>
-                    <div class="data-input-container">
-                        <input type="file" class="data-input" name="file">
+            <form action="upload.php" method="post" enctype="multipart/form-data">
+                <div class="author-parent-container">
+                    <div class="author-container">
+                        <div class="label">UPLOAD FILE</div>
+                        <div class="data-input-container">
+                            <input type="file" class="data-input" name="file">
+                        </div>
                     </div>
                 </div>
-            </div>
+                <input type="submit" value="Save" name="save">
+            </form>
+
+
+
 
             <div class="button-container">
                 <button class="save-button" type="submit" name="save">
