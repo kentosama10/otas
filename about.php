@@ -24,7 +24,7 @@ endif;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/index.css">
 
-    <title>SVCI Research and Development Archiving System | Home</title>
+    <title>SVCI Research and Development Archiving System | About</title>
 
 
 </head>
@@ -96,7 +96,7 @@ endif;
                 </li>
 
                 <li id="about">
-                    <a href="about.php" class="about-btn btn-large white waves-effect waves-dark z-depth-0">
+                    <a href="about.php " class="about-btn btn-large white waves-effect waves-dark z-depth-0">
                         <span>About</span>
                     </a>
                 </li>

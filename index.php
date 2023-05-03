@@ -159,7 +159,7 @@ endif;
             </li>
 
             <li>
-                <a href="# " class="btn-large white  black-text z-depth-0 left ">
+                <a href="about.php" class="btn-large white  black-text z-depth-0 left ">
                     <span class="about-btn-sn">About</span>
                     <i class="material-icons left yellow-text text-darken-4 info">info</i>
                 </a>
