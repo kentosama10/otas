@@ -3,6 +3,13 @@
 
     include 'components/connections.php'; 
 
+    function logUserActivity($user_id, $user_type, $activity_type, $activity_description) {
+        global $con;
+        $sql = "INSERT INTO user_activity_logs (user_id, user_type, activity_type, activity_description) VALUES (?, ?, ?, ?)";
+        $stmt = $con->prepare($sql);
+        $stmt->bind_param("isss", $user_id, $user_type, $activity_type, $activity_description);
+        $stmt->execute();
+    }
 
     if(isset($_POST['save']))
     

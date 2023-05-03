@@ -10,6 +10,15 @@ session_start();
     $sql_query = "SELECT program, count(8) as number FROM uploaded_thesis GROUP BY program";
     $result = $con->query($sql_query);
 
+    function logUserActivity($user_id, $user_type, $activity_type, $activity_description) {
+        global $db;
+        $sql = "INSERT INTO user_activity_logs (user_id, user_type, activity_type, activity_description) VALUES (?, ?, ?, ?)";
+        $stmt = $db->prepare($sql);
+        $stmt->bind_param("isss", $user_id, $user_type, $activity_type, $activity_description);
+        $stmt->execute();
+    }
+    
+
 ?>
 
 <!DOCTYPE html>
@@ -122,7 +131,7 @@ session_start();
             </div>
         </a>
 
-        <a href="#" class="general-link ">
+        <a href="admin-log-manager.php" class="general-link ">
             <div class="log-container">
             <i class="fa-solid fa-clock fa-lg"></i>
                 <p class="log-button">Log Manager
