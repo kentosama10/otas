@@ -21,9 +21,9 @@ if (isset($_POST['search'])) {
     if (mysqli_num_rows($result) > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
             $search_results .= '<div class="result-item">';
-            $search_results .= '<h3 class="result-title">Title:' . $row['title'] . '</h3>';
+            $search_results .= '<h3 class="result-title">Title: ' . $row['title'] . '</h3>';
             $search_results .= '<p class="result-author">Author: ' . $row['author'] . '</p>';
-            $search_results .= '<p class="result-abstract">Abstract:' . $row['abstract'] . '</p>';
+            $search_results .= '<p class="result-abstract">Abstract: ' . $row['abstract'] . '</p>';
             $search_results .= '</div>';
         }
     } else {
