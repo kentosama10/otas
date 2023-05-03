@@ -1,20 +1,40 @@
 <?php
-
-function logUserActivity($user_id, $user_type, $activity_type, $activity_description) {
-    global $con;
-    $sql = "INSERT INTO user_activity_logs (user_id, user_type, activity_type, activity_description) VALUES (?, ?, ?, ?)";
-    $stmt = $con->prepare($sql);
-    $stmt->bind_param("isss", $user_id, $user_type, $activity_type, $activity_description);
-    $stmt->execute();
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
 }
-session_start();
+
 include 'components/connections.php';
 
 if (empty($_SESSION['id'])):
     header('Location: user-signin.php');
 endif;
 
+$search_results = '';
+
+if (isset($_POST['search'])) {
+    $search_term = $_POST['search'];
+    
+    $sql = "SELECT `id`, `title`, `abstract`, `author`, `department`, `program`, `year`, `date`, `uploaded_by` FROM `uploaded_thesis` WHERE title LIKE '%$search_term%' OR author LIKE '%$search_term%' OR department LIKE '%$search_term%' OR program LIKE '%$search_term%' OR year LIKE '%$search_term%' OR date LIKE '%$search_term%' OR uploaded_by LIKE '%$search_term%';";
+
+    $result = mysqli_query($con, $sql);
+
+    if (mysqli_num_rows($result) > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            $search_results .= '<div class="result-item">';
+            $search_results .= '<h3 class="result-title">Title:' . $row['title'] . '</h3>';
+            $search_results .= '<p class="result-author">Author: ' . $row['author'] . '</p>';
+            $search_results .= '<p class="result-abstract">Abstract:' . $row['abstract'] . '</p>';
+            $search_results .= '</div>';
+        }
+    } else {
+        $search_results = "<p>No results found</p>";
+    }
+
+    mysqli_close($con);
+}
 ?>
+
+
 <!DOCTYPE html>
 <html>
 
@@ -30,7 +50,7 @@ endif;
 
     <link rel="shortcut icon" href="img/svci_logo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/result.css">
 
     <title>SVCI Research and Development Archiving System | Search Results</title>
 
@@ -138,10 +158,20 @@ endif;
         </div>
     </nav>
 
+    <form action="result.php" method="post" class="search-form">
+    <div class="search-container">
+        <input type="text" class="search-input" name="search" placeholder="Search...">
+    </div>
+</form>
+    <div class="results-container">
+        <?php echo $search_results; ?>
+    </div>
+
     <div class="footer-panel">
         <footer class="page-footer white">
             <hr>
-            <p class="footer-text black-text">&copy; 2023 <strong>ALEMANSUM:</strong> <a href="devs.php">Group 7</a> - SVCI Research and Development Archiving System</p>
+            <p class="footer-text black-text">&copy; 2023 <strong>ALEMANSUM:</strong> <a href="devs.php">Group 7</a> -
+                SVCI Research and Development Archiving System</p>
         </footer>
     </div>
 

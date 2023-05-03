@@ -58,15 +58,6 @@ if (isset($_POST['save'])) {
     }
 }
 
-function logUserActivity($user_id, $user_type, $activity_type, $activity_description) {
-    global $db;
-    $sql = "INSERT INTO user_activity_logs (user_id, user_type, activity_type, activity_description) VALUES (?, ?, ?, ?)";
-    $stmt = $db->prepare($sql);
-    $stmt->bind_param("isss", $user_id, $user_type, $activity_type, $activity_description);
-    $stmt->execute();
-}
-
-
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
     $delete_query = "DELETE FROM uploaded_thesis WHERE id = '$id'";
@@ -177,7 +168,7 @@ if (isset($_GET['id'])) {
             </div>
         </a>
 
-        <a href="admin-log-manager.php" class="general-link ">
+        <a href="#" class="general-link ">
             <div class="log-container">
                 <i class="fa-solid fa-clock fa-lg"></i>
                 <p class="log-button">Log Manager

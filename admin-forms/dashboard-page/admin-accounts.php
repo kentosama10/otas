@@ -73,15 +73,6 @@ session_start();
         }
     }
 
-    function logUserActivity($user_id, $user_type, $activity_type, $activity_description) {
-        global $db;
-        $sql = "INSERT INTO user_activity_logs (user_id, user_type, activity_type, activity_description) VALUES (?, ?, ?, ?)";
-        $stmt = $db->prepare($sql);
-        $stmt->bind_param("isss", $user_id, $user_type, $activity_type, $activity_description);
-        $stmt->execute();
-    }
-    
-
     if(isset($_GET['id'])) {
         $id = $_GET['id'];
         $delete_query = "DELETE FROM admin_accounts WHERE id = '$id'";
@@ -198,7 +189,7 @@ session_start();
             </div>
         </a>
 
-        <a href="admin-log-manager.php" class="general-link ">
+        <a href="#" class="general-link ">
             <div class="log-container">
             <i class="fa-solid fa-clock fa-lg"></i>
                 <p class="log-button">Log Manager

@@ -1,12 +1,4 @@
 <?php
-
-function logUserActivity($user_id, $user_type, $activity_type, $activity_description) {
-    global $con;
-    $sql = "INSERT INTO user_activity_logs (user_id, user_type, activity_type, activity_description) VALUES (?, ?, ?, ?)";
-    $stmt = $con->prepare($sql);
-    $stmt->bind_param("isss", $user_id, $user_type, $activity_type, $activity_description);
-    $stmt->execute();
-}
 session_start();
 include 'components/connections.php';
 
@@ -207,7 +199,7 @@ endif;
             <div class="ursbanner-container col s12 l9 hide-on-down">
                 <img src="img/svci_banner.png" alt="urs-banner" class="svcibanner">
             </div>
-            <form action="result.php" method="get">
+            <form action="result.php" method="post">
                 <div class="search-section col s12 m10 l3 offset-m1 left">
                     <h6 class="search-title">Explore research</h6>
                     <h6 class="search-statement">Access most of the thesis accomplished by St. Vincent's College
@@ -216,13 +208,19 @@ endif;
                     <div class="row">
                         <div class="input-field s12">
                             <div class="search-container ">
-                                <input type="text" class="search-input" placeholder="Search publications">
+                                <input type="text" name="search" class="search-input" placeholder="Search publications">
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col s12">
+                        <input type="submit" value="Search" style="visibility: hidden; position: absolute;">
+                    </div>
+                </div>
             </form>
+
         </div>
 
         <div class="row ursvmco">

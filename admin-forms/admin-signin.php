@@ -3,14 +3,6 @@ session_start();
 
 include 'components/connections.php';
 
-function logUserActivity($user_id, $user_type, $activity_type, $activity_description) {
-    global $con;
-    $sql = "INSERT INTO user_activity_logs (user_id, user_type, activity_type, activity_description) VALUES (?, ?, ?, ?)";
-    $stmt = $con->prepare($sql);
-    $stmt->bind_param("isss", $user_id, $user_type, $activity_type, $activity_description);
-    $stmt->execute();
-}
-
 if (isset($_SESSION['admin_id'])) {
     echo "<script>window.location.replace('dashboard-page/admin-dashboard.php');</script>";
 }
@@ -21,6 +13,7 @@ if (isset($_POST['save'])) {
     $password = $_POST['password'];
 
     $success = false;
+
 
     $sql_query = "SELECT acc_name FROM admin_accounts WHERE acc_id = '$account_id' AND username = '$username' AND password = '$password'";
     $result = $con->query($sql_query);
@@ -34,13 +27,11 @@ if (isset($_POST['save'])) {
         }
     }
     if ($success == true) {
-        // Log admin login event
-        logUserActivity($_SESSION['admin_id'], 'admin', 'login', 'Admin logged in');
-
         echo "<script>
         window.location.replace('dashboard-page/admin-dashboard.php');
         </script>";
     } else {
+
         echo "<script>
                 alert('Wrong Username or Password!')
                 window.location.replace('admin-signin.php');; 
@@ -49,7 +40,6 @@ if (isset($_POST['save'])) {
     mysqli_close($con);
 }
 ?>
-
 
 <!DOCTYPE html>
 
