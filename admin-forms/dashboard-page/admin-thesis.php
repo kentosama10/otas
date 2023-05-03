@@ -206,32 +206,36 @@ if (isset($_GET['id'])) {
             </tr>
 
             <?php
-            $sql = "SELECT id, title, abstract, author, department, program, year, date, uploaded_by from uploaded_thesis";
+            $sql = "SELECT id, title, abstract, author, department, program, year, date, uploaded_by, file_name from uploaded_thesis";
             $result = $con->query($sql);
 
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
-                    echo
-                        "<tr>
-                                <td>" . $row["id"] . "</td>
-                                <td>" . $row["title"] . "</td>
-                                <td>" . $row["abstract"] . "</td>
-                                <td>" . $row["author"] . "</td>
-                                <td>" . $row["department"] . "</td>
-                                <td>" . $row["program"] . "</td>
-                                <td>" . $row["year"] . "</td>
-                                <td>" . $row["date"] . "</td>
-                                <td>" . $row["uploaded_by"] . "</td>
-                                <td>" . "<a href='#' class = 'edit_button' onclick='showForm()'><i class='fa-solid fa-pen-to-square'></i></a>" .
-                        "<a href='admin-thesis.php?id=" . $row["id"] . "' class = 'delete_button'><i class='fa-solid fa-trash'></i></a>" . "</td>
-                            </tr>";
+                    echo "<tr>
+                <td>" . $row["id"] . "</td>
+                <td>" . $row["title"] . "</td>
+                <td>" . $row["abstract"] . "</td>
+                <td>" . $row["author"] . "</td>
+                <td>" . $row["department"] . "</td>
+                <td>" . $row["program"] . "</td>
+                <td>" . $row["year"] . "</td>
+                <td>" . $row["date"] . "</td>
+                <td>" . $row["uploaded_by"] . "</td>
+                <td>
+                    <a href='#' class='edit_button' onclick='showForm()'><i class='fa-solid fa-pen-to-square'></i></a>
+                    <a href='admin-thesis.php?id=" . $row["id"] . "' class='delete_button'><i class='fa-solid fa-trash'></i></a>
+                    <a href='../uploads/" . $row["file_name"] . "' target='_blank' class='view_button'><i class='fa-solid fa-eye'></i></a>
+                </td>
+            
+            </tr>";
                 }
                 echo "</table>";
             } else {
                 echo "No results.";
             }
-
             ?>
+
+
         </table>
     </div>
 
