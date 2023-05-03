@@ -95,7 +95,7 @@ endif;
                 </li>
 
                 <li id="about">
-                    <a href="# " class="about-btn btn-large white waves-effect waves-dark z-depth-0">
+                    <a href="about.php" class="about-btn btn-large white waves-effect waves-dark z-depth-0">
                         <span>About</span>
                     </a>
                 </li>

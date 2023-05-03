@@ -22,10 +22,9 @@ endif;
 
     <link rel="shortcut icon" href="img/svci_logo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/about.css">
 
     <title>SVCI Research and Development Archiving System | About</title>
-
 
 </head>
 
@@ -96,10 +95,11 @@ endif;
                 </li>
 
                 <li id="about">
-                    <a href="about.php " class="about-btn btn-large white waves-effect waves-dark z-depth-0">
+                    <a href="about.php" class="about-btn btn-large white waves-effect waves-dark z-depth-0">
                         <span>About</span>
                     </a>
                 </li>
+
                 <li id="login" class="right">
                     <a href="# " data-target="dropdown-account"
                         class="login-btn dropdown-account btn-large white waves-effect waves-dark z-depth-0">
@@ -130,10 +130,42 @@ endif;
         </div>
     </nav>
 
+    <div class="container about-container">
+        <div class="row">
+            <div class="col s12">
+                <h3 class="about-title">About SVCI Research and Development Archiving System</h3>
+                <p class="about-text">Welcome to SVCI Research and Development Archiving System, a platform that aims to
+                    streamline and simplify the process of archiving research and development outputs. Our system is
+                    designed to help researchers, scholars, and academicians efficiently store and retrieve their works
+                    while also ensuring that these valuable resources are easily accessible and searchable by interested
+                    parties.</p>
+                <p class="about-text">At SVCI, we believe that the advancement of research and development is crucial
+                    for the growth and progress of our society. Thus, we developed a system that provides a reliable and
+                    secure space for archiving and sharing research outputs, academic papers, conference proceedings,
+                    and other scholarly materials.</p>
+                <p class="about-text">Our system offers various features such as:</p>
+                <ul class="about-list">
+                    <li>Easy and secure online submission of research outputs</li>
+                    <li>Efficient search and retrieval of stored materials</li>
+                    <li>Customizable access and sharing settings for research materials</li>
+                    <li>Integration with other academic databases and resources</li>
+                </ul>
+                <p class="about-text">We continuously strive to improve our system to meet the evolving needs of
+                    researchers and scholars. If you have any suggestions or feedback, please don't hesitate to reach
+                    out to us.</p>
+                <p class="about-text">Thank you for choosing SVCI Research and Development Archiving System as your
+                    platform for preserving and sharing valuable research outputs. Together, let us contribute to the
+                    advancement of knowledge and progress of our society.</p>
+            </div>
+        </div>
+    </div>
+
+
     <div class="footer-panel">
         <footer class="page-footer white">
             <hr>
-            <p class="footer-text black-text">&copy; 2023 <strong>ALEMANSUM:</strong> <a href="devs.php">Group 7</a> - SVCI Research and Development Archiving System</p>
+            <p class="footer-text black-text">&copy; 2023 <strong>ALEMANSUM:</strong> <a href="devs.php">Group 7</a> -
+                SVCI Research and Development Archiving System</p>
         </footer>
     </div>
 
