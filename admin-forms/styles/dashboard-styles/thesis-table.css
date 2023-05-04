@@ -1,106 +1,106 @@
 .top-section {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-    gap: 20px;
-    z-index: 1000;
-    max-width: 100px;
-    position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  gap: 20px;
+  z-index: 1000;
+  max-width: 100px;
+  position: relative;
 }
 
 .action-container {
-    flex: 1;
-    display: flex;
-    gap: 15px;
+  flex: 1;
+  display: flex;
+  gap: 15px;
 }
 
 .action-parent {
-    display: flex;
-    flex: 1;
+  display: flex;
+  flex: 1;
 }
 
 .add-record {
-    background-color: #42a13d;
-    flex: 1;
-    padding: 10px 30px 10px 30px;
-    color: white;
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, .15);
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-    transition: .15s;
-    z-index: 0;
+  background-color: #42a13d;
+  flex: 1;
+  padding: 10px 30px 10px 30px;
+  color: white;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.15);
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.15s;
+  z-index: 0;
 }
 
 .add-record,
 .action-container a {
-    border-radius: 3px;
-    font-size: 15px;
-    text-decoration: none;
-    font-weight: 700;
+  border-radius: 3px;
+  font-size: 15px;
+  text-decoration: none;
+  font-weight: 700;
 }
 
 .top-section:hover .tooltip {
-    opacity: 1;
+  opacity: 1;
 }
 
 .add-record:hover {
-    background-color: #388a33;
+  background-color: #388a33;
 }
 
 .thesis-label {
-    text-align: center;
-    background-color: #1e6dce;
-    color: white;
-    font-weight: 700;
-    padding: 16px;
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
-    text-shadow: 0 2px 3px rgba(0, 0, 0, .6);
+  text-align: center;
+  background-color: #1e6dce;
+  color: white;
+  font-weight: 700;
+  padding: 16px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.6);
 }
 
 .endusers-account-label {
-    text-align: center;
-    background-color: #1e6dce;
-    color: white;
-    font-weight: 700;
-    padding: 16px;
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
-    margin-top: 20px;
-    text-shadow: 0 2px 3px rgba(0, 0, 0, .6);
+  text-align: center;
+  background-color: #1e6dce;
+  color: white;
+  font-weight: 700;
+  padding: 16px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  margin-top: 20px;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.6);
 }
 
 .thesis-table-container {
-    display: flex;
-    overflow-x: auto;
+  display: flex;
+  overflow-x: auto;
 }
 
 table {
-    flex: 1;
-    table-layout: fixed;
-    border-spacing: 0;
-    border-radius: 5px;
+  flex: 1;
+  table-layout: fixed;
+  border-spacing: 0;
+  border-radius: 5px;
 }
 
 th {
-    background-color: #5289cc;
-    color: white;
-    padding: 12px 8px 12px 8px;
-    font-weight: 700;
+  background-color: #5289cc;
+  color: white;
+  padding: 12px 8px 12px 8px;
+  font-weight: 700;
 }
 
 td {
-    font-family: Arial;
-    text-align: center;
-    padding: 10px 8px 10px 8px;
-    background-color: white;
-    user-select: text;
-    border: 1px solid rgba(30, 109, 206, 0.37);
-    max-width: 150px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+  font-family: Arial;
+  text-align: center;
+  padding: 10px 8px 10px 8px;
+  background-color: white;
+  user-select: text;
+  border: 1px solid rgba(30, 109, 206, 0.37);
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 table tr .id_header,
@@ -108,17 +108,17 @@ table tr .action_header,
 table tr .year_header,
 table tr .date_header,
 table tr .uploadedby_header {
-    min-width: 100px;
+  min-width: 100px;
 }
 
 table tr .title_header,
 table tr .author_header,
 table tr .program-header {
-    min-width: 150px;
+  min-width: 150px;
 }
 
 table tr .abstract_header {
-    min-width: 500px;
+  min-width: 500px;
 }
 
 tr td .edit_button {
@@ -127,55 +127,72 @@ tr td .edit_button {
     border: none;
     border-radius: 3px;
     cursor: pointer;
-    transition: .15s;
+    transition: 0.15s;
     background-color: rgb(59, 102, 182);
     margin-right: 5px;
     position: relative;
-}
-
-tr td .delete_button {
+  }
+  
+  tr td .delete_button {
     padding: 6px 12px;
     color: white;
     border: none;
     border-radius: 3px;
     cursor: pointer;
-    transition: .15s;
+    transition: 0.15s;
     background-color: rgb(204, 58, 58);
-}
-
-tr td .edit_button:hover {
+  }
+  
+  tr td .view_button {
+    padding: 6px 12px;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.15s;
+    background-color: rgb(46, 125, 50);
+    margin-right: 5px;
+    position: relative;
+  }
+  
+  tr td .view_button:hover {
+    background-color: rgb(27, 94, 32);
+  }
+  
+  tr td .edit_button:hover {
     background-color: rgb(41, 71, 128);
-}
-
-tr td .delete_button:hover {
+  }
+  
+  tr td .delete_button:hover {
     background-color: rgb(141, 38, 38);
-}
+  }
+  
 
 .form-label {
-    margin-top: 20px;
-    color: white;
-    background-color: #1e6dce;
-    font-weight: 700;
-    text-shadow: 0 2px 3px rgba(0, 0, 0, .6);
-    padding: 12px 8px 12px 8px;
-    display: flex;
-    justify-content: center;
-    flex: 1;
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
-    display: none;
+  margin-top: 20px;
+  color: white;
+  background-color: #1e6dce;
+  font-weight: 700;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.6);
+  padding: 12px 8px 12px 8px;
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  display: none;
 }
 
 .form-container {
-    flex: 1;
-    background-color: white;
-    padding: 15px 20%;
-    display: flex;
-    flex-direction: column;
-    border-bottom-left-radius: 3px;
-    border-bottom-right-radius: 3px;
-    display: none;
-    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+  flex: 1;
+  background-color: white;
+  padding: 15px 20%;
+  display: flex;
+  flex-direction: column;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  display: none;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
 }
 
 .title-parent-container,
@@ -183,9 +200,9 @@ tr td .delete_button:hover {
 .author-parent-container,
 .dept-program-parent-container,
 .year-date-parent-container {
-    flex: 1;
-    display: flex;
-    flex-direction: row;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
 }
 
 .title-container,
@@ -195,105 +212,105 @@ tr td .delete_button:hover {
 .program-container,
 .year-container,
 .date-container {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    gap: 3px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 3px;
 }
 
 .label {
-    font-weight: 600;
-    white-space: nowrap;
+  font-weight: 600;
+  white-space: nowrap;
 }
 
 .data-input-container {
-    display: flex;
-    flex: 1;
+  display: flex;
+  flex: 1;
 }
 
 .data-input {
-    font-family: Arial;
-    flex: 1;
-    padding: 14px 10px;
-    font-size: 16px;
-    border-radius: 4px;
-    border: 1px solid rgb(36, 36, 36);
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, .15);
-    caret-color: #1e6dce;
-    min-width: 50px;
-    width: 0;
+  font-family: Arial;
+  flex: 1;
+  padding: 14px 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid rgb(36, 36, 36);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.15);
+  caret-color: #1e6dce;
+  min-width: 50px;
+  width: 0;
 }
 
 .data-input:focus,
 select:focus {
-    outline: none;
-    border: 1px solid rgb(76, 139, 216);
+  outline: none;
+  border: 1px solid rgb(76, 139, 216);
 }
 
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .button-container {
-    flex: 1;
-    display: flex;
-    margin-top: 10px;
-    gap: 20px;
-    padding: 10px;
+  flex: 1;
+  display: flex;
+  margin-top: 10px;
+  gap: 20px;
+  padding: 10px;
 }
 
 .save-button {
-    flex: 1;
-    padding: 10px 30px;
-    background-color: #42a13d;
-    color: white;
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, .15);
-    font-weight: 700;
-    font-size: 16px;
-    border: none;
-    border-radius: 3px;
-    transition: .15s;
-    cursor: pointer;
+  flex: 1;
+  padding: 10px 30px;
+  background-color: #42a13d;
+  color: white;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.15);
+  font-weight: 700;
+  font-size: 16px;
+  border: none;
+  border-radius: 3px;
+  transition: 0.15s;
+  cursor: pointer;
 }
 
 .save-button:hover {
-    background-color: #388a33;
+  background-color: #388a33;
 }
 
 .cancel-button {
-    flex: 1;
-    padding: 10px 30px;
-    background-color: rgb(197, 197, 197);
-    color: rgb(80, 80, 80);
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, .15);
-    font-weight: 700;
-    font-size: 16px;
-    border: none;
-    border-radius: 3px;
-    transition: .15s;
-    cursor: pointer;
+  flex: 1;
+  padding: 10px 30px;
+  background-color: rgb(197, 197, 197);
+  color: rgb(80, 80, 80);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.15);
+  font-weight: 700;
+  font-size: 16px;
+  border: none;
+  border-radius: 3px;
+  transition: 0.15s;
+  cursor: pointer;
 }
 
 .cancel-button:hover {
-    background-color: rgb(160, 160, 160);
-    color: rgb(48, 48, 48);
+  background-color: rgb(160, 160, 160);
+  color: rgb(48, 48, 48);
 }
 
 @media screen and (max-width: 768px) {
-    .title-parent-container,
-    .abstract-parent-container,
-    .author-parent-container,
-    .dept-program-parent-container,
-    .year-date-parent-container {
-        flex-direction: column;
-    }
-    .button-container {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-    }
+  .title-parent-container,
+  .abstract-parent-container,
+  .author-parent-container,
+  .dept-program-parent-container,
+  .year-date-parent-container {
+    flex-direction: column;
+  }
+  .button-container {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
 }

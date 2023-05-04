@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 08, 2022 at 08:03 AM
+-- Generation Time: May 04, 2023 at 04:41 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `theses_archive_db`
+-- Database: `thesis_archive_db`
 --
 
 -- --------------------------------------------------------
@@ -43,7 +43,7 @@ CREATE TABLE `admin_accounts` (
 --
 
 INSERT INTO `admin_accounts` (`id`, `acc_id`, `email`, `username`, `password`, `acc_name`, `acc_type`, `date`) VALUES
-(1, 1211900327, 'dummy.dummy2@gmail.com', 'admin1', 'a', 'Christian', 'Expert', '2022-09-05 02:14:53');
+(1, 1211900327, 'dummy.dummy2@gmail.com', 'admin1', 'a', 'Kent', 'Expert', '2023-05-04 02:31:21');
 
 -- --------------------------------------------------------
 
@@ -60,17 +60,12 @@ CREATE TABLE `uploaded_thesis` (
   `program` varchar(255) NOT NULL,
   `year` year(4) NOT NULL,
   `date` date NOT NULL,
-  `uploaded_by` varchar(255) NOT NULL
+  `uploaded_by` varchar(255) NOT NULL,
+  `file_name` varchar(255) NOT NULL,
+  `file_size` int(11) NOT NULL,
+  `file_tmp` varchar(255) NOT NULL,
+  `file_type` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `uploaded_thesis`
---
-
-INSERT INTO `uploaded_thesis` (`id`, `title`, `abstract`, `author`, `department`, `program`, `year`, `date`, `uploaded_by`) VALUES
-(11, 'Sample', 'Sample', 'Sample', ' CHI', ' BS Tourism Management', 2022, '2022-09-08', 'Christian'),
-(12, 'CHI TITLE', 'CHI ABSTRACT', 'CHI', ' CHI', ' BS Tourism Management', 2022, '2022-09-08', 'Christian'),
-(13, 'COBA', 'COBA', 'COBA', ' COBA', ' BS Office Administration', 2022, '2022-09-08', 'Christian');
 
 -- --------------------------------------------------------
 
