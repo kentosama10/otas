@@ -189,14 +189,6 @@ session_start();
             </div>
         </a>
 
-        <a href="#" class="general-link ">
-            <div class="log-container">
-            <i class="fa-solid fa-clock fa-lg"></i>
-                <p class="log-button">Log Manager
-                    <i class="fa-solid fa-angle-right arrow-icon "></i>
-                </p>
-            </div>
-        </a>
     </div>
     
    <div class="top-section">
