@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 04, 2023 at 04:41 AM
+-- Generation Time: May 05, 2023 at 08:39 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -67,6 +67,15 @@ CREATE TABLE `uploaded_thesis` (
   `file_type` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `uploaded_thesis`
+--
+
+INSERT INTO `uploaded_thesis` (`id`, `title`, `abstract`, `author`, `department`, `program`, `year`, `date`, `uploaded_by`, `file_name`, `file_size`, `file_tmp`, `file_type`) VALUES
+(17, 'test', 'test', 'test', 'Computer-Studies-Department', 'BSIT', 2022, '2023-05-05', 'Kent', '64549edc12db99.42286302.pdf', 0, '', ''),
+(18, 'test2', 'test2', 'test2', 'Computer-Studies-Department', 'BSCS', 2022, '2023-05-05', 'Kent', '64549f611e3bf4.85607739.pdf', 0, '', ''),
+(19, 'test3', 'test3', 'test3', 'Accounting-Education-Department', 'BSA', 2022, '2023-05-05', 'Kent', '64549fe4eec7d8.43204838.pdf', 0, '', '');
+
 -- --------------------------------------------------------
 
 --
@@ -88,7 +97,7 @@ CREATE TABLE `user_accounts` (
 --
 
 INSERT INTO `user_accounts` (`id`, `email`, `username`, `password`, `acc_name`, `acc_type`, `date`) VALUES
-(76, 'aozulx@m.com', 'user1', '1', 'Crix', 'End-user', '2022-09-07 08:35:52');
+(78, 'sample@gmail.com', 'test', 'test', 'test', 'End-user', '2023-05-05 06:28:07');
 
 --
 -- Indexes for dumped tables
@@ -133,13 +142,13 @@ ALTER TABLE `admin_accounts`
 -- AUTO_INCREMENT for table `uploaded_thesis`
 --
 ALTER TABLE `uploaded_thesis`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `user_accounts`
 --
 ALTER TABLE `user_accounts`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=77;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
