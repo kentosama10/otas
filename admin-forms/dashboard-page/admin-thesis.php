@@ -35,7 +35,7 @@ if (isset($_POST['save'])) {
         $file_tmp = $_FILES['file']['tmp_name'];
         $file_type = $_FILES['file']['type'];
         $file_ext = strtolower(pathinfo($file_name, PATHINFO_EXTENSION));
-        $extensions = array("pdf", "doc", "docx");
+        $extensions = array("pdf");
         if (in_array($file_ext, $extensions) && $file_size <= 5242880) {
             $new_file_name = uniqid('', true) . '.' . $file_ext;
             move_uploaded_file($file_tmp, '../uploads/' . $new_file_name);
@@ -51,7 +51,7 @@ if (isset($_POST['save'])) {
                 </script>";
         } else {
             echo "<script>
-                    alert('Error uploading file. Please ensure that the file is in PDF, DOC, or DOCX format and is less than 5MB.')
+                    alert('Error uploading file. Please ensure that the file is in PDF and is less than 5MB.')
                     window.location.replace('admin-thesis.php');
                 </script>";
         }
@@ -370,7 +370,7 @@ if (isset($_GET['id'])) {
                 <div class="author-container">
                     <div class="label">UPLOAD FILE</div>
                     <div class="data-input-container">
-                        <input type="file" class="data-input" name="file">
+                        <input type="file" class="data-input" name="file" accept="application/pdf">
                     </div>
                 </div>
             </div>

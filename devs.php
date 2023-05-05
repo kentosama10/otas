@@ -2,8 +2,8 @@
 include 'components/connections.php';
 
 if (empty($_SESSION['id'])):
-    header('Location: user-signin.php');
-endif;?>
+  header('Location: user-signin.php');
+endif; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -128,7 +128,7 @@ endif;?>
       }
     }
   </style>
-  
+
 </head>
 
 <body>
@@ -144,9 +144,8 @@ endif;?>
     <section>
       <img src="img/devs/Kim.png" alt="Manlangit" />
       <h2>Manlangit, Kim Gedonn</h2>
-      <i>"Gentlemen, we're all educated people here that use their words
-        instead of fists. Let's take our time talking, I rely on my handsome
-        face to eat so please, don't hit the face or I'll go hungry."</i>
+      <i>"Dami ng smoke, nag-load, nag-toke, na-choke, tapos nag-elevate
+        Malamang dope, nag-coke, na-broke, kasi hindi ka nag-behave.</i>
       <p>ghedonnheaven@gmail.com</p>
     </section>
     <section>
