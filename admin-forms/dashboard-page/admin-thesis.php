@@ -35,7 +35,7 @@ if (isset($_POST['save'])) {
         $file_tmp = $_FILES['file']['tmp_name'];
         $file_type = $_FILES['file']['type'];
         $file_ext = strtolower(pathinfo($file_name, PATHINFO_EXTENSION));
-        $extensions = array("pdf", "doc", "docx");
+        $extensions = array("pdf");
         if (in_array($file_ext, $extensions) && $file_size <= 5242880) {
             $new_file_name = uniqid('', true) . '.' . $file_ext;
             move_uploaded_file($file_tmp, '../uploads/' . $new_file_name);
@@ -51,7 +51,7 @@ if (isset($_POST['save'])) {
                 </script>";
         } else {
             echo "<script>
-                    alert('Error uploading file. Please ensure that the file is in PDF, DOC, or DOCX format and is less than 5MB.')
+                    alert('Error uploading file. Please ensure that the file is in PDF and is less than 5MB.')
                     window.location.replace('admin-thesis.php');
                 </script>";
         }
@@ -60,6 +60,15 @@ if (isset($_POST['save'])) {
 
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
+    $select_query = "SELECT file_name FROM uploaded_thesis WHERE id = '$id'";
+    $result = $con->query($select_query);
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+        $file_path = '../uploads/' . $row['file_name'];
+        if (file_exists($file_path)) {
+            unlink($file_path); // delete the file from the server
+        }
+    }
     $delete_query = "DELETE FROM uploaded_thesis WHERE id = '$id'";
     $delete = $con->query($delete_query);
 }
@@ -204,28 +213,34 @@ if (isset($_GET['id'])) {
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
                     echo "<tr>
-                <td>" . $row["id"] . "</td>
-                <td>" . $row["title"] . "</td>
-                <td>" . $row["abstract"] . "</td>
-                <td>" . $row["author"] . "</td>
-                <td>" . $row["department"] . "</td>
-                <td>" . $row["program"] . "</td>
-                <td>" . $row["year"] . "</td>
-                <td>" . $row["date"] . "</td>
-                <td>" . $row["uploaded_by"] . "</td>
-                <td>
-                    <a href='#' class='edit_button' onclick='showForm()'><i class='fa-solid fa-pen-to-square'></i></a>
-                    <a href='admin-thesis.php?id=" . $row["id"] . "' class='delete_button'><i class='fa-solid fa-trash'></i></a>
-                    <a href='../uploads/" . $row["file_name"] . "' target='_blank' class='view_button'><i class='fa-solid fa-eye'></i></a>
-                </td>
-            
-            </tr>";
+            <td>" . $row["id"] . "</td>
+            <td>" . $row["title"] . "</td>
+            <td>" . $row["abstract"] . "</td>
+            <td>" . $row["author"] . "</td>
+            <td>" . $row["department"] . "</td>
+            <td>" . $row["program"] . "</td>
+            <td>" . $row["year"] . "</td>
+            <td>" . $row["date"] . "</td>
+            <td>" . $row["uploaded_by"] . "</td>
+            <td>
+                <a href='#' class='edit_button' onclick='showForm()'><i class='fa-solid fa-pen-to-square'></i></a>
+                <a href='admin-thesis.php?id=" . $row["id"] . "' class='delete_button' onclick='return confirmDelete()'><i class='fa-solid fa-trash'></i></a>
+                <a href='../uploads/" . $row["file_name"] . "' target='_blank' class='view_button'><i class='fa-solid fa-eye'></i></a>
+            </td>
+        </tr>";
                 }
                 echo "</table>";
             } else {
                 echo "No results.";
             }
             ?>
+
+            <script>
+                function confirmDelete() {
+                    return confirm("Are you sure you want to delete this thesis record?");
+                }
+            </script>
+
 
 
         </table>
@@ -370,7 +385,7 @@ if (isset($_GET['id'])) {
                 <div class="author-container">
                     <div class="label">UPLOAD FILE</div>
                     <div class="data-input-container">
-                        <input type="file" class="data-input" name="file">
+                        <input type="file" class="data-input" name="file" accept="application/pdf">
                     </div>
                 </div>
             </div>
