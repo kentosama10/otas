@@ -1,7 +1,13 @@
-Abstract
+# SVCI Research and Development Archiving System
 
+The SVCI's Research and Development Archiving System is a capstone project dedicated to the creation of a digital platform for the systematic organization, storage, and retrieval of research and development (R&D) materials. The project aims to improve accessibility, efficiency, and cross-functional collaboration by incorporating advanced search features and intuitive user interfaces. It also ensures the preservation and security of intellectual property by implementing robust data protection measures. This system will foster a streamlined R&D process, enabling SVCI to harness its innovative potential to the fullest.
 
-St. Vincent’s College Inc. (SVCI) research and development department produces a significant number of thesis papers every year. To address the challenges of manual and error-prone archiving, we propose SVCI’s Research and Development Archiving System, a web-based application that streamlines the process of storing and accessing thesis papers.
-The system will be developed using the quantitative methodology to ensure that the system meets the needs and requirements of the end-users. The proposed system will have an administrator page, accessible only by research and development staff, where they can upload, manage and organize the thesis papers. Users will have access to a search function that allows them to easily locate thesis papers. The system will be designed to be user-friendly and customizable, with advanced search functionalities that include keyword search and filters.
-The web-based application will be built using PHP, JavaScript, MySQL, and HTML/CSS. The development process will involve the use of various software tools and technologies. The project will be evaluated based on its functionality, usability, security, and performance.
-Upon completion, the proposed system will provide SVCI's research and development department with a reliable and efficient way of archiving thesis papers. It will enable staff to easily upload, manage and organize thesis papers, and provide an easy-to-use search function for users. Overall, this project represents a significant step forward for SVCI's research and development department, providing a modern and effective archiving system that will support the school's academic mission for years to come.
+## Installation
+
+1.  Clone or download the repository.
+2.  Download and install XAMPP from https://www.apachefriends.org/index.html
+3.  Extract the downloaded file and move the extracted folder to the "htdocs" folder in the XAMPP installation directory.
+4.  Open the XAMPP control panel and start the Apache and MySQL modules.
+5.  Open a web browser and navigate to http://localhost/phpmyadmin/
+7.  Create a new database named "thesis_archive_db" and import the database file "thesis_archive_db.sql" located in the "database-backup" folder of the extracted source code.
+8.  Open a web browser and navigate to http://localhost/svci-rndas/index.php to access the web application, where "otas" is the name of the extracted folder.
