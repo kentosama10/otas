@@ -1,6 +1,6 @@
 # SVCI Research and Development Archiving System
 
-The SVCI's Research and Development Archiving System is a capstone project dedicated to the creation of a digital platform for the systematic organization, storage, and retrieval of research and development (R&D) materials. The project aims to improve accessibility, efficiency, and cross-functional collaboration by incorporating advanced search features and intuitive user interfaces. It also ensures the preservation and security of intellectual property by implementing robust data protection measures. This system will foster a streamlined R&D process, enabling SVCI to harness its innovative potential to the fullest.
+The SVCI's Research and Development Archiving System is a project aimed at creating a user-friendly, centralized repository for consolidating, organizing, and preserving the valuable research and development outputs of the SVCI community. This innovative platform will streamline access to knowledge, facilitate interdisciplinary collaboration, and promote the long-term growth and success of the organization.
 
 ## Installation
 
